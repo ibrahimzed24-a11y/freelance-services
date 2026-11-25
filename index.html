@@ -11,9 +11,9 @@
 <link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:'Caveat';font-style:normal;font-weight:500 600;font-display:swap;src:url(fonts/caveat-normal.woff2) format('woff2')}
-@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/dmsans-normal.woff2) format('woff2')}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-italic.woff2) format('woff2')}
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:block;src:url(fonts/dmsans-normal.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:block;src:url(fonts/fraunces-italic.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:block;src:url(fonts/fraunces-normal.woff2) format('woff2')}
 </style>
 <style>
   :root{
@@ -41,7 +41,7 @@
   nav{display:flex;align-items:center;gap:26px}
   nav a{color:var(--mut);font-size:15px;font-weight:500;transition:color .15s}
   nav a:hover{color:var(--ink)}
-  .nav-cta{background:var(--terra);color:#fff !important;font-weight:600;padding:11px 22px;border-radius:12px;box-shadow:0 3px 0 rgba(35,27,22,.18)}
+  .nav-cta{background:#BA4B34;color:#fff !important;font-weight:600;padding:11px 22px;border-radius:12px;box-shadow:0 3px 0 rgba(35,27,22,.18)}
   .nav-cta:hover{transform:translateY(-1px)}
 
   .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:72px 0 84px}
@@ -52,7 +52,7 @@
   .cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
   .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:13px;font-weight:600;font-size:16px;transition:transform .12s,box-shadow .12s}
   .btn:active{transform:translateY(1px)}
-  .btn-t{background:var(--terra);color:#fff;box-shadow:0 4px 0 rgba(35,27,22,.2)}
+  .btn-t{background:#BA4B34;color:#fff;box-shadow:0 4px 0 rgba(35,27,22,.2)}
   .btn-t:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(35,27,22,.2)}
   .btn-plain{color:var(--ink);font-weight:600;border-bottom:2px solid var(--sand);padding-bottom:2px}
   .btn-plain:hover{border-color:var(--terra)}
@@ -97,7 +97,7 @@
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
   .step{border-top:3px solid var(--sand);padding-top:18px}
   .step b{font-family:'Fraunces',serif;color:var(--olive);font-size:15px;display:block;margin-bottom:6px}
-  .step h4{font-size:17px;margin-bottom:6px;font-family:'Fraunces',serif;font-weight:700}
+  .step h3{font-size:17px;margin-bottom:6px;font-family:'Fraunces',serif;font-weight:700}
   .step p{color:var(--mut);font-size:14.5px}
 
   .contact{background:var(--sand);border-radius:26px;padding:64px 44px;text-align:center;box-shadow:0 14px 34px rgba(35,27,22,.14)}
@@ -108,6 +108,7 @@
   .contact .email{display:inline-block;margin-top:22px;color:var(--ink);font-weight:600;border-bottom:2px solid rgba(35,27,22,.25);padding-bottom:2px}
   .contact .email:hover{border-color:var(--terra)}
 
+  .priv{flex-basis:100%;font-size:13.5px;max-width:640px}
   footer{padding:44px 0 50px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;color:var(--mut);font-size:14.5px}
   footer .wordmark{font-size:19px}
   footer a:hover{color:var(--ink)}
@@ -228,7 +229,7 @@
   .ba-note{margin-top:22px;line-height:1.6}
   .steps{gap:32px;margin-top:36px}
   .step{padding-top:22px}
-  .step h4{margin-bottom:10px}
+  .step h3{margin-bottom:10px}
   .step p{font-size:15.5px;line-height:1.65}
   .promise{margin-top:44px}
   .lead{max-width:none;padding:44px;gap:28px}
@@ -276,11 +277,11 @@
 <meta name="twitter:description" content="Websites for restaurants and hotels, found on Google and in AI answers. Hotel marketing that starts with your own site. By a former resort chef.">
 <meta name="twitter:image" content="https://freelance-services-zid16.vercel.app/portrait.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://freelance-services-zid16.vercel.app/#ibrahim", "name": "Ibrahim Zid", "jobTitle": "Web designer for restaurants and hotels", "url": "https://freelance-services-zid16.vercel.app/", "image": "https://freelance-services-zid16.vercel.app/portrait.jpg", "email": "mailto:ibrahim.zed24@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG"}, "sameAs": ["https://github.com/ibrahimzed24-a11y"], "knowsAbout": ["Restaurant websites", "Hotel websites", "Local SEO", "AI-answer optimisation (GEO/AEO)", "GA4 and Search Console", "Menu and food-cost review", "Food safety", "Hotel marketing"], "description": "Freelance web designer in Cairo, Egypt. Five years as a chef and two as an operations manager in Maldives hotels, now building websites for restaurants and hotels worldwide."}, {"@type": "WebSite", "@id": "https://freelance-services-zid16.vercel.app/#website", "url": "https://freelance-services-zid16.vercel.app/", "name": "Ibrahim Zid", "inLanguage": "en"}, {"@type": "ProfessionalService", "@id": "https://freelance-services-zid16.vercel.app/#business", "name": "Ibrahim Zid, web design for restaurants and hotels", "url": "https://freelance-services-zid16.vercel.app/", "serviceType": "Web design for restaurants and hotels", "areaServed": "Worldwide", "founder": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "email": "mailto:ibrahim.zed24@gmail.com"}, {"@type": "Service", "name": "Restaurant and hotel website design", "description": "A website with your menu, rooms and booking contact, set up to be found on Google. For hotels, the base of hotel marketing.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 900, "priceCurrency": "USD"}}}, {"@type": "Service", "name": "Menu and food-cost review", "description": "Review of dishes, portions and supplier prices with a plain list of fixes.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 150, "priceCurrency": "USD"}}}, {"@type": "Service", "name": "Growth audit", "description": "SEO, AI-answer, speed and tracking check with a written list of the 10 fixes that matter most.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 149, "priceCurrency": "USD"}}}, {"@type": "Service", "name": "Restaurant and hotel SEO, and AI answers", "description": "Structure, content and technical setup so restaurants and hotels are found on Google and in AI answers. The base of hotel marketing.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide"}, {"@type": "Service", "name": "Analytics and speed setup", "description": "GA4, Tag Manager, Search Console and speed fixes.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide"}, {"@type": "Service", "name": "Monthly upkeep", "description": "Search Console and GA4 kept healthy, pages improved or added each month, monthly report.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "UnitPriceSpecification", "minPrice": 300, "priceCurrency": "USD", "unitText": "MONTH"}}}, {"@type": "Service", "name": "One-page website", "description": "One focused page for a business, designed and built.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 350, "priceCurrency": "USD"}}}, {"@type": "Service", "name": "One prototype", "description": "One real page designed and built first, credited in full if we continue.", "provider": {"@id": "https://freelance-services-zid16.vercel.app/#ibrahim"}, "areaServed": "Worldwide", "offers": {"@type": "Offer", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 120, "priceCurrency": "USD"}}}]}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9E84M0C09"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
 gtag('js',new Date());gtag('config','G-G9E84M0C09');
+window.addEventListener('load',function(){setTimeout(function(){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-G9E84M0C09';document.head.appendChild(g);},2500);});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var u=a.href||'';
 var n=u.indexOf('wa.me')>-1?'contact_whatsapp_click':u.indexOf('mailto:')===0?'contact_email_click':/vercel\.app|github\.com/.test(u)&&u.indexOf('freelance-services')<0?'portfolio_click':'';
 if(n)gtag('event',n,{link_url:u});});
@@ -301,6 +302,7 @@ if(n)gtag('event',n,{link_url:u});});
 </header>
 
 <div class="wrap" id="top">
+<main>
   <div class="hero">
     <div>
       <span class="hand">hi, I'm Ibrahim.</span>
@@ -393,9 +395,9 @@ if(n)gtag('event',n,{link_url:u});});
     <h2>Simple, and no pressure</h2>
     <p class="sub">You never pay for something you haven't seen.</p>
     <div class="steps">
-      <div class="step"><b>Step 1</b><h4>You send your link</h4><p>Within 48 hours you get a one-page note in plain words: 3 things I'd fix and what it would bring you. It's free.</p></div>
-      <div class="step"><b>Step 2</b><h4>Like it? I build a prototype</h4><p>One real page you open on your phone. It's $120, and it is credited if we continue. Not what you wanted? You stop there.</p></div>
-      <div class="step"><b>Step 3</b><h4>I build the rest</h4><p>Your full site, live on your own address. Want me to keep it running? That is from $300 a month.</p></div>
+      <div class="step"><b>Step 1</b><h3>You send your link</h3><p>Within 48 hours you get a one-page note in plain words: 3 things I'd fix and what it would bring you. It's free.</p></div>
+      <div class="step"><b>Step 2</b><h3>Like it? I build a prototype</h3><p>One real page you open on your phone. It's $120, and it is credited if we continue. Not what you wanted? You stop there.</p></div>
+      <div class="step"><b>Step 3</b><h3>I build the rest</h3><p>Your full site, live on your own address. Want me to keep it running? That is from $300 a month.</p></div>
     </div>
     <div class="promise">
       <h3>My promise</h3>
@@ -443,9 +445,11 @@ if(n)gtag('event',n,{link_url:u});});
     </div>
   </section>
   <div class="pickbar" id="pickBar" aria-live="polite"><span id="pickCount"></span><a href="#audit">Continue</a></div>
+</main>
   <footer>
     <a href="#top" aria-label="Back to top"><img class="foot-sticker" width="110" height="110" loading="lazy" src="avatar-sticker-800.svg" alt="Ibrahim Zid"></a>
     <span>© 2026 Ibrahim Zid · Cairo, Egypt · <a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a></span>
+    <span class="priv">Privacy: what you type in the form goes only to me, so I can reply. This page counts visits with Google Analytics. No ads, no selling data.</span>
   </footer>
 </div>
 <script>
@@ -466,7 +470,7 @@ if(n)gtag('event',n,{link_url:u});});
   function toggleCard(c){
     var name=c.getAttribute('data-pick'),i=picks.indexOf(name),on=i<0;
     if(on)picks.push(name);else picks.splice(i,1);
-    c.setAttribute('aria-pressed',on?'true':'false');renderPicks();
+    c.setAttribute('aria-pressed',on?'true':'false');if(on)gtag('event','select_service',{service:name});renderPicks();
   }
   Array.prototype.forEach.call(document.querySelectorAll('.pick'),function(c){
     c.addEventListener('click',function(){toggleCard(c);});
@@ -531,7 +535,7 @@ if(n)gtag('event',n,{link_url:u});});
       .then(function(r){return r.json();})
       .then(function(j){if(!j.success)throw 0;
         ok.textContent="Got it, thank you. I'll look at your site myself and send you a one-page note within 48 hours.";ok.hidden=false;
-        $('pane1').hidden=true;$('pane2').hidden=true;$('stepInd').textContent='Sent';ok.scrollIntoView({behavior:'smooth',block:'center'});})
+        gtag('event','generate_lead',{lead_type:'mini_audit',picks:picks.length});$('pane1').hidden=true;$('pane2').hidden=true;$('stepInd').textContent='Sent';ok.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(){btn.disabled=false;
         ok.textContent="That did not go through, so I opened an email for you instead. Just press send, or use the WhatsApp link.";ok.hidden=false;
         location.href='mailto:ibrahim.zed24@gmail.com?subject='+encodeURIComponent('Free mini-audit request')+'&body='+encodeURIComponent(text(d));});
