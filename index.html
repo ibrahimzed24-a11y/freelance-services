@@ -262,6 +262,17 @@
     .contact{padding:52px 22px}
     footer{padding:40px 0 44px}
   }
+
+  .chef{margin-bottom:20px;background:#FFFCF4;border:2px solid var(--ink);outline:2px solid var(--sand);outline-offset:-10px;padding:34px 38px;transform:rotate(-.3deg)}
+  .chef .hand{font-family:'Caveat',cursive;color:var(--terra);font-size:26px;font-weight:600}
+  .chef h3{font-size:26px;margin:2px 0 14px}
+  .chef .menu{list-style:none;margin:0 0 14px;padding:0}
+  .chef .menu li{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-weight:600}
+  .chef .menu i{flex:1;border-bottom:2px dotted rgba(35,27,22,.35);transform:translateY(-4px);min-width:16px}
+  .chef .menu em{font-style:normal;font-weight:400;color:var(--mut);text-align:right}
+  .chef .price{margin-top:8px}
+  .smallbiz{color:var(--mut);margin:20px auto 0;font-size:16px}
+  @media(max-width:600px){.chef{padding:28px 24px;transform:none}.chef .menu li{flex-wrap:wrap}.chef .menu i{display:none}.chef .menu em{flex-basis:100%;text-align:left;font-size:15px;margin-top:-2px}}
 </style>
 <!-- seo-block-start -->
 <link rel="canonical" href="https://freelance-services-zid16.vercel.app/">
@@ -307,7 +318,7 @@ if(n)gtag('event',n,{link_url:u});});
     <div>
       <span class="hand">hi, I'm Ibrahim.</span>
       <h1>Websites for restaurants and hotels, <em>found on Google.</em></h1>
-      <p class="lede">Built by a former resort chef. Send me your site and I'll send back 3 things I'd fix.</p>
+      <p class="lede">Built by a former resort chef, who knows your kitchen. Send me your site and I'll send back 3 things I'd fix.</p>
       <div class="cta">
         <a class="btn btn-t" href="#audit">Get my free mini-audit</a>
         <a class="btn-plain" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">or message me on WhatsApp</a>
@@ -321,8 +332,19 @@ if(n)gtag('event',n,{link_url:u});});
   </div>
   <section id="services">
     <span class="kicker">what I do</span>
-    <h2>Three things, with honest prices</h2>
-    <p class="sub">Introductory rates. Restaurants, hotels and other small businesses. Tap the ones you are interested in.</p>
+    <h2>What I do, with honest prices</h2>
+    <p class="sub">Introductory rates. Tap the ones you are interested in.</p>
+    <div class="card pick chef" role="button" tabindex="0" aria-pressed="false" data-pick="Menu and food-cost review ($150)">
+      <span class="hand">from the chef</span>
+      <h3>Menu and food-cost review</h3>
+      <ul class="menu">
+        <li><span>Every dish, costed</span><i></i><em>plate cost vs menu price</em></li>
+        <li><span>Portion sizes</span><i></i><em>same plate, same size</em></li>
+        <li><span>Supplier prices</span><i></i><em>where you overpay</em></li>
+      </ul>
+      <p>We go through dishes, portions and supplier prices to find where money leaks.</p>
+      <span class="price">from $150</span><span class="tick">Chosen</span>
+    </div>
     <div class="grid">
       <div class="card pick" role="button" tabindex="0" aria-pressed="false" data-pick="Website">
         <h3>Restaurant and hotel website design</h3>
@@ -345,18 +367,6 @@ if(n)gtag('event',n,{link_url:u});});
     <span class="kicker">for restaurants and hotels</span>
     <h2>I know your kitchen from the inside</h2>
     <p class="sub">Five years as a chef in Maldives resort kitchens, then two years as an operations manager at a Maldives hotel. I know how a busy service runs, so I build the site around how your guests and your team actually work.</p>
-    <div class="grid grid2">
-      <div class="card pick" role="button" tabindex="0" aria-pressed="false" data-pick="Restaurant and hotel website ($900)">
-        <h3>Restaurant and hotel website</h3>
-        <p>A website with your menu, rooms and booking contact, set up so guests can find you on Google. For hotels, it is the base of your hotel marketing.</p>
-        <span class="price">from $900</span><span class="tick">Chosen</span>
-      </div>
-      <div class="card pick" role="button" tabindex="0" aria-pressed="false" data-pick="Menu and food-cost review ($150)">
-        <h3>Menu and food-cost review</h3>
-        <p>We go through dishes, portions and supplier prices to find where money leaks.</p>
-        <span class="price">from $150</span><span class="tick">Chosen</span>
-      </div>
-    </div>
     <div class="certs">
       <p class="trained">Trained in food handling, allergen awareness and workplace hazard communication.</p>
     </div>
@@ -404,6 +414,8 @@ if(n)gtag('event',n,{link_url:u});});
       <p>If we continue, the $120 is taken off your price in full. I deliver on the date we agree, or you get 10% off for every late day, up to half. Want a deeper look first? A full audit is $149, also credited.</p>
     </div>
   </section>
+  <!-- First client quote: put the real quote in this section and remove the hidden attribute. Leave empty until a client has said it. -->
+  <section id="voice" hidden></section>
   <section id="audit" style="padding-bottom:24px">
     <span class="kicker">a free look at your site</span>
     <h2>Send me your link. I'll send back 3 things I'd fix.</h2>
@@ -441,6 +453,7 @@ if(n)gtag('event',n,{link_url:u});});
       <div class="cta">
         <a class="btn btn-t" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp me: +20 120 345 5111</a>
       </div>
+      <p class="smallbiz">Run a different small business? I take a few of those too. Just message me.</p>
       <a class="email" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">or email ibrahim.zed24@gmail.com</a>
     </div>
   </section>
