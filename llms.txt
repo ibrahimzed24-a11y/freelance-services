@@ -2,6 +2,8 @@
 
 > Freelance web designer and developer based in Cairo, Egypt, working with small businesses worldwide. Landing pages, small business websites, UI/UX, SEO and AI-answer visibility (GEO/AEO), GA4 and Tag Manager setup, site speed, social content, CRM and email automation, and AI chat helpers. Works in English and Arabic. One prototype first, approved before the rest is built.
 
+Also offers, for restaurants and hotels: websites found on Google, menu and food-cost review, and food-safety checklists and training material (background: five years in luxury resort kitchens).
+
 ## Pages
 - [Home, services and work](https://freelance-services-zid16.vercel.app/): services, process and live projects
 
