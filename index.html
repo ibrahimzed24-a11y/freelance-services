@@ -291,11 +291,16 @@
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+var TRK='https://freelance-crm-zid.vercel.app/api/track',SID='';
+try{SID=sessionStorage.getItem('zsid')||'';if(!SID){SID=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now())+'-'+Math.random().toString(36).slice(2,10);sessionStorage.setItem('zsid',SID);}}catch(e){SID=SID||String(Date.now())+'-'+Math.random().toString(36).slice(2,10);}
+window.zSid=SID;
+function track(ev,svc){try{var q=new URLSearchParams(location.search),b={event:ev,sid:SID,path:location.pathname,lang:document.documentElement.lang||'en',device:/Mobi|Android|iPhone/i.test(navigator.userAgent)?'mobile':'desktop',utm_source:q.get('utm_source')||'',utm_medium:q.get('utm_medium')||'',utm_campaign:q.get('utm_campaign')||'',referrer:document.referrer||''};if(svc)b.service=svc;if(navigator.sendBeacon)navigator.sendBeacon(TRK,JSON.stringify(b));}catch(e){}}
+window.zTrack=track;
 gtag('js',new Date());gtag('config','G-G9E84M0C09');
-window.addEventListener('load',function(){setTimeout(function(){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-G9E84M0C09';document.head.appendChild(g);},2500);});
+window.addEventListener('load',function(){setTimeout(function(){track('page_view');},800);setTimeout(function(){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-G9E84M0C09';document.head.appendChild(g);},2500);});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var u=a.href||'';
 var n=u.indexOf('wa.me')>-1?'contact_whatsapp_click':u.indexOf('mailto:')===0?'contact_email_click':/vercel\.app|github\.com/.test(u)&&u.indexOf('freelance-services')<0?'portfolio_click':'';
-if(n)gtag('event',n,{link_url:u});});
+if(n){gtag('event',n,{link_url:u});if(n!=='portfolio_click')track(n);}});
 </script>
 <!-- seo-block-end -->
 </head>
@@ -462,7 +467,7 @@ if(n)gtag('event',n,{link_url:u});});
   <footer>
     <a href="#top" aria-label="Back to top"><img class="foot-sticker" width="110" height="110" loading="lazy" src="avatar-sticker-800.svg" alt="Ibrahim Zid"></a>
     <span>© 2026 Ibrahim Zid · Cairo, Egypt · <a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a></span>
-    <span class="priv">Privacy: what you type in the form goes only to me, so I can reply. This page counts visits with Google Analytics. No ads, no selling data.</span>
+    <span class="priv">Privacy: what you type in the form goes only to me, so I can reply. This page counts visits with Google Analytics and my own simple visit log. No ads, no selling data.</span>
   </footer>
 </div>
 <script>
@@ -483,7 +488,7 @@ if(n)gtag('event',n,{link_url:u});});
   function toggleCard(c){
     var name=c.getAttribute('data-pick'),i=picks.indexOf(name),on=i<0;
     if(on)picks.push(name);else picks.splice(i,1);
-    c.setAttribute('aria-pressed',on?'true':'false');if(on)gtag('event','select_service',{service:name});renderPicks();
+    c.setAttribute('aria-pressed',on?'true':'false');if(on){gtag('event','select_service',{service:name});zTrack('select_service',name);}renderPicks();
   }
   Array.prototype.forEach.call(document.querySelectorAll('.pick'),function(c){
     c.addEventListener('click',function(){toggleCard(c);});
@@ -541,14 +546,14 @@ if(n)gtag('event',n,{link_url:u});});
     if(f.elements['botcheck'].checked)return;
     body.append('botcheck','');
     if(d['Contact'].indexOf('@')>0)body.append('replyto',d['Contact']);
-    for(var k in d)body.append(k,d[k]);
+    for(var k in d)body.append(k,d[k]);if(window.zSid)body.append('visit_id',window.zSid);
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;
     var ok=$('auditOk');
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:body})
       .then(function(r){return r.json();})
       .then(function(j){if(!j.success)throw 0;
         ok.textContent="Got it, thank you. I'll look at your site myself and send you a one-page note within 48 hours.";ok.hidden=false;
-        gtag('event','generate_lead',{lead_type:'mini_audit',picks:picks.length});$('pane1').hidden=true;$('pane2').hidden=true;$('stepInd').textContent='Sent';ok.scrollIntoView({behavior:'smooth',block:'center'});})
+        gtag('event','generate_lead',{lead_type:'mini_audit',picks:picks.length});zTrack('generate_lead');$('pane1').hidden=true;$('pane2').hidden=true;$('stepInd').textContent='Sent';ok.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(){btn.disabled=false;
         ok.textContent="That did not go through, so I opened an email for you instead. Just press send, or use the WhatsApp link.";ok.hidden=false;
         location.href='mailto:ibrahim.zed24@gmail.com?subject='+encodeURIComponent('Free mini-audit request')+'&body='+encodeURIComponent(text(d));});
