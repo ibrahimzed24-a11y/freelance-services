@@ -3,115 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrahim Zid — Websites, Landing Pages & UI/UX</title>
-<meta name="description" content="I design and build fast, modern websites and landing pages for businesses. Next.js, React, Tailwind CSS. Based in Egypt, working with clients worldwide.">
+<title>Ibrahim Zid · Websites, Landing Pages & UI/UX</title>
+<meta name="description" content="I design and build fast, clean websites and landing pages for small businesses and startups. Mobile first, delivered working, not just as a mockup.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0a1220; --bg2:#0d1729; --card:#0f1c31; --line:#1b2c47;
-    --ink:#eef3fa; --mut:#8fa1b8; --acc:#00c7c2; --acc-soft:rgba(0,199,194,.12);
-    --green:#25d366;
+    --paper:#EEF1F5; --ink:#0F1720; --ink2:#182430; --teal:#1FB5A3; --gold:#E9C46A;
+    --mut:#5a6a7c; --line:#D8DEE8;
+    --shadow:10px 10px 24px rgba(15,23,32,.09),-10px -10px 24px rgba(255,255,255,.95);
+    --shadow-sm:6px 6px 14px rgba(15,23,32,.08),-6px -6px 14px rgba(255,255,255,.9);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  body{font-family:'Montserrat',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:500}
   .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-  a{text-decoration:none}
+  a{text-decoration:none;color:inherit}
 
-  header{position:sticky;top:0;z-index:20;background:rgba(10,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .bar{display:flex;justify-content:space-between;align-items:center;height:66px}
-  .logo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:var(--ink);letter-spacing:.2px}
-  .logo em{font-style:normal;color:var(--acc)}
-  nav{display:flex;align-items:center;gap:26px}
-  nav a{color:var(--mut);font-size:14.5px;font-weight:500;transition:color .15s}
+  header{position:sticky;top:0;z-index:20;background:rgba(238,241,245,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;justify-content:space-between;align-items:center;height:70px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand svg{width:34px;height:34px}
+  .wordmark{font-weight:800;font-size:19px;letter-spacing:-.3px}
+  .wordmark em{font-style:normal;color:var(--teal)}
+  nav{display:flex;align-items:center;gap:24px}
+  nav a{color:var(--mut);font-size:14px;font-weight:600;transition:color .15s}
   nav a:hover{color:var(--ink)}
-  .nav-cta{background:var(--acc);color:#04211f !important;font-weight:600;padding:9px 18px;border-radius:9px}
+  .nav-cta{background:var(--ink);color:#fff !important;padding:10px 20px;border-radius:999px}
 
-  .hero{padding:96px 0 88px;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:700px;height:420px;background:radial-gradient(closest-side,rgba(0,199,194,.14),transparent);pointer-events:none}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--mut);font-weight:500}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--acc-soft)}
-  h1{font-family:'Montserrat',sans-serif;font-size:clamp(34px,5.4vw,58px);line-height:1.12;font-weight:800;letter-spacing:-.5px;margin:26px 0 20px;max-width:760px;position:relative}
-  h1 em{font-style:normal;color:var(--acc)}
-  .lede{color:var(--mut);font-size:18px;max-width:600px;margin-bottom:36px}
+  .hero{padding:88px 0 72px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--paper);box-shadow:var(--shadow-sm);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--mut)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  h1{font-size:clamp(32px,5.2vw,56px);line-height:1.14;font-weight:800;letter-spacing:-1px;margin:26px 0 20px;max-width:820px}
+  h1 em{font-style:normal;color:var(--teal)}
+  .lede{color:var(--mut);font-size:17.5px;max-width:620px;margin-bottom:34px}
   .cta{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:11px;font-weight:600;font-size:15.5px;transition:transform .12s,box-shadow .12s}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .12s,box-shadow .12s}
   .btn:active{transform:translateY(1px)}
-  .btn-w{background:var(--green);color:#052e12}
-  .btn-w:hover{box-shadow:0 8px 26px rgba(37,211,102,.28)}
-  .btn-o{border:1px solid var(--line);color:var(--ink);background:var(--bg2)}
-  .btn-o:hover{border-color:var(--acc)}
-  .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;color:var(--mut);font-size:14px}
-  .meta span{display:flex;align-items:center;gap:8px}
-  .meta i{font-style:normal;color:var(--acc)}
+  .btn-ink{background:var(--ink);color:#fff;box-shadow:var(--shadow-sm)}
+  .btn-ink:hover{box-shadow:0 10px 26px rgba(15,23,32,.25)}
+  .btn-o{background:var(--paper);box-shadow:var(--shadow-sm);color:var(--ink)}
+  .btn-o:hover{color:var(--teal)}
+  .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:42px;color:var(--mut);font-size:13.5px;font-weight:600}
+  .meta span{display:flex;align-items:center;gap:9px}
+  .meta i{font-style:normal;color:var(--teal)}
 
-  section{padding:76px 0}
-  .label{color:var(--acc);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
-  h2{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.4vw,34px);font-weight:700;letter-spacing:-.3px;margin:12px 0 10px}
-  .sub{color:var(--mut);margin-bottom:42px;max-width:560px}
+  section{padding:64px 0}
+  .label{color:var(--teal);font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+  h2{font-size:clamp(25px,3.2vw,33px);font-weight:800;letter-spacing:-.5px;margin:12px 0 10px}
+  .sub{color:var(--mut);margin-bottom:40px;max-width:560px;font-size:15.5px}
 
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:border-color .15s,transform .15s}
-  .card:hover{border-color:#28436b;transform:translateY(-3px)}
-  .card h3{font-family:'Montserrat',sans-serif;font-size:18.5px;font-weight:700;margin-bottom:10px}
-  .card p{color:var(--mut);font-size:15px}
-  .tag{display:inline-block;margin-top:18px;background:var(--acc-soft);color:var(--acc);font-weight:600;font-size:13.5px;padding:6px 14px;border-radius:999px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--paper);box-shadow:var(--shadow);border-radius:22px;padding:30px 26px;transition:transform .15s}
+  .card:hover{transform:translateY(-3px)}
+  .card h3{font-size:18px;font-weight:800;margin-bottom:10px;letter-spacing:-.2px}
+  .proj h3{padding-right:26px}
+  .card p{color:var(--mut);font-size:14.5px}
+  .tag{display:inline-block;margin-top:18px;background:var(--ink);color:var(--teal);font-weight:700;font-size:13px;padding:7px 16px;border-radius:999px}
 
   .proj{position:relative}
-  .proj .arrow{position:absolute;top:26px;right:24px;color:var(--mut);transition:color .15s,transform .15s;font-size:18px}
-  .proj:hover .arrow{color:var(--acc);transform:translate(2px,-2px)}
-  .proj a{color:inherit;display:block}
+  .proj .arrow{position:absolute;top:26px;right:24px;color:var(--mut);transition:color .15s,transform .15s;font-size:18px;font-weight:700}
+  .proj:hover .arrow{color:var(--teal);transform:translate(2px,-2px)}
+  .proj a{display:block}
   .proj .stack{margin-top:16px;color:var(--mut);font-size:13px}
-  .proj .stack b{color:var(--ink);font-weight:600}
+  .proj .stack b{color:var(--ink);font-weight:700}
 
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .step{border-top:2px solid var(--line);padding-top:22px}
-  .step b{color:var(--acc);font-family:'Montserrat',sans-serif;font-size:14px;display:block;margin-bottom:8px}
-  .step h4{font-size:16px;margin-bottom:6px;font-weight:600}
-  .step p{color:var(--mut);font-size:14px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .step{background:var(--paper);box-shadow:var(--shadow-sm);border-radius:18px;padding:24px 22px}
+  .step b{color:var(--teal);font-size:13px;font-weight:800;display:block;margin-bottom:8px}
+  .step h4{font-size:15.5px;margin-bottom:6px;font-weight:800}
+  .step p{color:var(--mut);font-size:13.5px}
 
-  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:44px}
-  .about p{color:var(--mut);margin-top:14px}
+  .about{background:var(--ink);border-radius:26px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;box-shadow:var(--shadow)}
+  .about h2{color:#fff}
+  .about p{color:#9fb0c3;margin-top:14px;font-size:15px}
   .points{display:grid;gap:14px}
-  .point{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .point i{font-style:normal;color:var(--acc);font-weight:700}
-  .point p{margin:0;font-size:14.5px;color:var(--ink)}
-  .point small{display:block;color:var(--mut);margin-top:2px}
+  .point{display:flex;gap:12px;align-items:flex-start;background:var(--ink2);border-radius:14px;padding:16px 18px}
+  .point i{font-style:normal;color:var(--teal);font-weight:800}
+  .point p{margin:0;font-size:14px;color:#eef3f8}
+  .point small{display:block;color:#8b9cae;margin-top:2px;font-weight:500}
 
-  .contact{background:linear-gradient(160deg,#0f2136,#0a1220);border:1px solid var(--line);border-radius:22px;padding:60px 40px;text-align:center}
-  .contact p{color:var(--mut);margin:12px auto 32px;max-width:440px}
+  .contact{background:var(--ink);border-radius:26px;padding:60px 40px;text-align:center;box-shadow:var(--shadow)}
+  .contact h2{color:#fff}
+  .contact p{color:#9fb0c3;margin:12px auto 32px;max-width:460px;font-size:15px}
   .contact .cta{justify-content:center}
+  .btn-teal{background:var(--teal);color:#052926}
+  .btn-teal:hover{box-shadow:0 10px 26px rgba(31,181,163,.35)}
+  .btn-ghost{border:1px solid #2c3d50;color:#eef3f8;background:transparent;box-shadow:none}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
 
-  footer{padding:36px 0;color:var(--mut);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-  footer a{color:var(--mut)}
+  footer{padding:38px 0 44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--mut);font-size:13.5px;font-weight:600}
+  footer .brand svg{width:28px;height:28px}
   footer a:hover{color:var(--ink)}
 
   @media(max-width:860px){
-    .grid,.steps{grid-template-columns:1fr 1fr}
-    .about{grid-template-columns:1fr;padding:32px 26px}
+    .grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .about{grid-template-columns:1fr;padding:36px 26px}
     nav a:not(.nav-cta){display:none}
   }
   @media(max-width:560px){
     .grid,.steps{grid-template-columns:1fr}
-    .hero{padding:64px 0}
-    section{padding:56px 0}
+    .hero{padding:60px 0 52px}
+    section{padding:48px 0}
     .contact{padding:44px 22px}
-    .meta{gap:16px}
+    .meta{gap:14px}
   }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap bar">
-    <a class="logo" href="#top">Ibrahim<em>Zid</em></a>
+    <a class="brand" href="#top" aria-label="Ibrahim Zid">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2AD1BC"/><stop offset="1" stop-color="#0E8F8A"/></linearGradient></defs><rect x="6" y="6" width="108" height="108" rx="30" fill="#0F1720"/><path d="M32 36h50M88 84H38M80 38L40 82" fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="90" cy="36" r="6" fill="#E9C46A"/></svg>
+      <span class="wordmark">ibrahim<em>.</em>zid</span>
+    </a>
     <nav>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
-      <a class="nav-cta" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp me</a>
+      <a class="nav-cta" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Start a project</a>
     </nav>
   </div>
 </header>
@@ -120,16 +133,16 @@
 
   <div class="hero">
     <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
-    <h1>Websites that turn visitors into <em>customers</em>.</h1>
-    <p class="lede">I'm Ibrahim, a web developer and UI/UX designer. I design and build fast, mobile-first websites and landing pages with Next.js, React and Tailwind CSS, from the first sketch to launch.</p>
+    <h1>Websites, landing pages & UI/UX that turn visitors into <em>clients</em>.</h1>
+    <p class="lede">I design and build fast, clean websites and landing pages for small businesses and startups. Clear layout, strong copy, mobile first. Delivered working, not just as a mockup.</p>
     <div class="cta">
-      <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Chat on WhatsApp</a>
+      <a class="btn btn-ink" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Start a project</a>
       <a class="btn btn-o" href="#work">See my work</a>
     </div>
     <div class="meta">
       <span><i>◆</i> Based in Egypt, working worldwide</span>
       <span><i>◆</i> Replies the same day</span>
-      <span><i>◆</i> You see progress at every step</span>
+      <span><i>◆</i> One prototype first, we agree, then I build</span>
     </div>
   </div>
 
@@ -191,7 +204,7 @@
   <section id="process">
     <span class="label">Process</span>
     <h2>How we work together</h2>
-    <p class="sub">Simple and transparent: you approve each step before the next one starts.</p>
+    <p class="sub">Simple and transparent. You approve each step before the next one starts.</p>
     <div class="steps">
       <div class="step"><b>01</b><h4>Brief</h4><p>You tell me about your business and what the site must achieve. I reply with scope, price and timeline.</p></div>
       <div class="step"><b>02</b><h4>Design</h4><p>You get a visual design to review and approve before a single line of code is written.</p></div>
@@ -221,15 +234,18 @@
       <h2>Tell me about your project</h2>
       <p>Message me on WhatsApp or email with what you need, and I usually reply the same day with next steps.</p>
       <div class="cta">
-        <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp: +20 120 345 5111</a>
-        <a class="btn btn-o" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">ibrahim.zed24@gmail.com</a>
+        <a class="btn btn-teal" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp: +20 120 345 5111</a>
+        <a class="btn btn-ghost" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">ibrahim.zed24@gmail.com</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <span>© 2026 Ibrahim Zid · Web Developer & UI/UX Designer</span>
-    <span><a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a> · Cairo, Egypt</span>
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="108" height="108" rx="30" fill="#0F1720"/><path d="M32 36h50M88 84H38M80 38L40 82" fill="none" stroke="#1FB5A3" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="90" cy="36" r="6" fill="#E9C46A"/></svg>
+      <span class="wordmark" style="font-size:16px">ibrahim<em>.</em>zid</span>
+    </a>
+    <span>© 2026 Ibrahim Zid · <a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a> · Cairo, Egypt</span>
   </footer>
 </div>
 </body>
