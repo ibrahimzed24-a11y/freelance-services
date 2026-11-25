@@ -273,6 +273,19 @@
   .chef .price{margin-top:8px}
   .smallbiz{color:var(--mut);margin:20px auto 0;font-size:16px}
   @media(max-width:600px){.chef{padding:28px 24px;transform:none}.chef .menu li{flex-wrap:wrap}.chef .menu i{display:none}.chef .menu em{flex-basis:100%;text-align:left;font-size:15px;margin-top:-2px}}
+
+  .path{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;position:relative}
+  .path::before{content:"";position:absolute;left:8px;right:8px;top:16px;border-top:3px dotted rgba(35,27,22,.3)}
+  .path li{position:relative;padding:44px 24px 0 0}
+  .path li::before{content:"";position:absolute;left:0;top:8px;width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid var(--paper)}
+  .path li.now::before{background:var(--terra)}
+  .path b{display:block;font-family:'Caveat',cursive;font-size:40px;font-weight:600;line-height:1;color:var(--ink);margin-bottom:8px}
+  .path li.now b{color:var(--terra)}
+  .path span{display:block;font-size:17px;max-width:250px}
+  @media(max-width:700px){.path{grid-template-columns:1fr;gap:26px;margin-top:28px}.path::before{left:8px;right:auto;top:10px;bottom:10px;border-top:0;border-left:3px dotted rgba(35,27,22,.3)}.path li{padding:0 0 0 44px}.path li::before{top:6px}.path b{font-size:34px}}
+  .step b{font-family:'Caveat',cursive;font-size:34px;font-weight:600;color:var(--terra);line-height:1;display:block;margin-bottom:6px}
+  .contact .cta{margin:28px 0 20px;justify-content:center}
+  .contact .smallbiz{color:#4A3E35;margin:30px auto 0;padding-top:22px;border-top:2px dashed rgba(35,27,22,.2);max-width:420px}
 </style>
 <!-- seo-block-start -->
 <link rel="canonical" href="https://freelance-services-zid16.vercel.app/">
@@ -371,7 +384,12 @@ if(n){gtag('event',n,{link_url:u});if(n!=='portfolio_click')track(n);}});
   <section id="background">
     <span class="kicker">for restaurants and hotels</span>
     <h2>I know your kitchen from the inside</h2>
-    <p class="sub">Five years as a chef in Maldives resort kitchens, then two years as an operations manager at a Maldives hotel. I know how a busy service runs, so I build the site around how your guests and your team actually work.</p>
+    <p class="sub">I know how a busy service runs, so I build the site around how your guests and your team actually work.</p>
+    <ol class="path">
+      <li><b>5 years</b><span>Chef in Maldives resort kitchens</span></li>
+      <li><b>2 years</b><span>Operations manager at a Maldives hotel</span></li>
+      <li class="now"><b>now</b><span>Sites built like a kitchen runs: fast, clear, and found on Google.</span></li>
+    </ol>
     <div class="certs">
       <p class="trained">Trained in food handling, allergen awareness and workplace hazard communication.</p>
     </div>
@@ -458,8 +476,8 @@ if(n){gtag('event',n,{link_url:u});if(n!=='portfolio_click')track(n);}});
       <div class="cta">
         <a class="btn btn-t" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp me: +20 120 345 5111</a>
       </div>
-      <p class="smallbiz">Run a different small business? I take a few of those too. Just message me.</p>
       <a class="email" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">or email ibrahim.zed24@gmail.com</a>
+      <p class="smallbiz">Run a different small business? I take a few of those too. Just message me.</p>
     </div>
   </section>
   <div class="pickbar" id="pickBar" aria-live="polite"><span id="pickCount"></span><a href="#audit">Continue</a></div>
