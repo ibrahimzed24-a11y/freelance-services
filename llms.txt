@@ -5,12 +5,7 @@
 Also offers, for restaurants and hotels: websites found on Google, menu and food-cost review, and food-safety checklists and training material (background: five years in luxury resort kitchens).
 
 ## Pages
-- [Home, services and work](https://freelance-services-zid16.vercel.app/): services, process and live projects
-
-## Live projects (own work)
-- [Gate 31](https://gate-31-up.vercel.app): DJ web app with library, decks and mixer
-- [Helm](https://marketing-os-fullstack.vercel.app): AI marketing operations platform
-- [Nile Harvest](https://nileharvest-website.vercel.app): website for an Egyptian food-sourcing desk
+- [Home, services and work](https://freelance-services-zid16.vercel.app/): services, process, free mini-audit and notes
 
 ## Contact
 - Email: ibrahim.zed24@gmail.com
