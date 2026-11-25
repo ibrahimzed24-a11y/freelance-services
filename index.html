@@ -3,141 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ibrahim Zid — Web Developer & UI/UX Designer</title>
-<meta name="description" content="I design and build fast, modern websites and landing pages. Next.js, React, Tailwind CSS. Based in Egypt, working with clients worldwide.">
+<title>Ibrahim Zid — Websites, Landing Pages & UI/UX</title>
+<meta name="description" content="I design and build fast, modern websites and landing pages for businesses. Next.js, React, Tailwind CSS. Based in Egypt, working with clients worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b0f17; --card:#121826; --ink:#e8ecf3; --mut:#9aa6ba;
-    --acc:#38bdf8; --acc2:#22c55e; --line:#1f2937;
+    --bg:#0a1220; --bg2:#0d1729; --card:#0f1c31; --line:#1b2c47;
+    --ink:#eef3fa; --mut:#8fa1b8; --acc:#00c7c2; --acc-soft:rgba(0,199,194,.12);
+    --green:#25d366;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
-  header{padding:26px 0;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-weight:800;font-size:20px;letter-spacing:.5px}
-  .logo span{color:var(--acc)}
-  nav a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:15px}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  a{text-decoration:none}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(10,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;justify-content:space-between;align-items:center;height:66px}
+  .logo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:var(--ink);letter-spacing:.2px}
+  .logo em{font-style:normal;color:var(--acc)}
+  nav{display:flex;align-items:center;gap:26px}
+  nav a{color:var(--mut);font-size:14.5px;font-weight:500;transition:color .15s}
   nav a:hover{color:var(--ink)}
-  .hero{padding:84px 0 64px;text-align:center}
-  .hero .tag{display:inline-block;border:1px solid var(--line);color:var(--acc);border-radius:999px;padding:6px 16px;font-size:13px;margin-bottom:22px}
-  h1{font-size:clamp(30px,5vw,50px);line-height:1.15;font-weight:800}
+  .nav-cta{background:var(--acc);color:#04211f !important;font-weight:600;padding:9px 18px;border-radius:9px}
+
+  .hero{padding:96px 0 88px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:700px;height:420px;background:radial-gradient(closest-side,rgba(0,199,194,.14),transparent);pointer-events:none}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--mut);font-weight:500}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--acc-soft)}
+  h1{font-family:'Montserrat',sans-serif;font-size:clamp(34px,5.4vw,58px);line-height:1.12;font-weight:800;letter-spacing:-.5px;margin:26px 0 20px;max-width:760px;position:relative}
   h1 em{font-style:normal;color:var(--acc)}
-  .hero p{color:var(--mut);max-width:620px;margin:20px auto 34px;font-size:18px}
-  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .btn{display:inline-block;padding:14px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px}
-  .btn-p{background:var(--acc);color:#06222f}
-  .btn-w{background:var(--acc2);color:#052e12}
-  .btn-o{border:1px solid var(--line);color:var(--ink)}
-  section{padding:56px 0}
-  h2{font-size:28px;margin-bottom:8px}
-  .sub{color:var(--mut);margin-bottom:34px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
-  .card h3{font-size:19px;margin-bottom:10px;color:var(--ink)}
+  .lede{color:var(--mut);font-size:18px;max-width:600px;margin-bottom:36px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 28px;border-radius:11px;font-weight:600;font-size:15.5px;transition:transform .12s,box-shadow .12s}
+  .btn:active{transform:translateY(1px)}
+  .btn-w{background:var(--green);color:#052e12}
+  .btn-w:hover{box-shadow:0 8px 26px rgba(37,211,102,.28)}
+  .btn-o{border:1px solid var(--line);color:var(--ink);background:var(--bg2)}
+  .btn-o:hover{border-color:var(--acc)}
+  .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px;color:var(--mut);font-size:14px}
+  .meta span{display:flex;align-items:center;gap:8px}
+  .meta i{font-style:normal;color:var(--acc)}
+
+  section{padding:76px 0}
+  .label{color:var(--acc);font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
+  h2{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.4vw,34px);font-weight:700;letter-spacing:-.3px;margin:12px 0 10px}
+  .sub{color:var(--mut);margin-bottom:42px;max-width:560px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 26px;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:#28436b;transform:translateY(-3px)}
+  .card h3{font-family:'Montserrat',sans-serif;font-size:18.5px;font-weight:700;margin-bottom:10px}
   .card p{color:var(--mut);font-size:15px}
-  .card .price{color:var(--acc);font-weight:700;margin-top:14px;display:block;font-size:15px}
-  .proj a{color:var(--acc);text-decoration:none;font-size:14px}
-  .proj a:hover{text-decoration:underline}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:s}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-  .step b{color:var(--acc);display:block;font-size:14px;margin-bottom:6px}
+  .tag{display:inline-block;margin-top:18px;background:var(--acc-soft);color:var(--acc);font-weight:600;font-size:13.5px;padding:6px 14px;border-radius:999px}
+
+  .proj{position:relative}
+  .proj .arrow{position:absolute;top:26px;right:24px;color:var(--mut);transition:color .15s,transform .15s;font-size:18px}
+  .proj:hover .arrow{color:var(--acc);transform:translate(2px,-2px)}
+  .proj a{color:inherit;display:block}
+  .proj .stack{margin-top:16px;color:var(--mut);font-size:13px}
+  .proj .stack b{color:var(--ink);font-weight:600}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{border-top:2px solid var(--line);padding-top:22px}
+  .step b{color:var(--acc);font-family:'Montserrat',sans-serif;font-size:14px;display:block;margin-bottom:8px}
+  .step h4{font-size:16px;margin-bottom:6px;font-weight:600}
   .step p{color:var(--mut);font-size:14px}
-  .contact{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:44px;text-align:center}
-  .contact p{color:var(--mut);margin:10px 0 26px}
-  footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
-  @media(max-width:640px){nav{display:none}.contact{padding:30px 20px}}
+
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:44px}
+  .about p{color:var(--mut);margin-top:14px}
+  .points{display:grid;gap:14px}
+  .point{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .point i{font-style:normal;color:var(--acc);font-weight:700}
+  .point p{margin:0;font-size:14.5px;color:var(--ink)}
+  .point small{display:block;color:var(--mut);margin-top:2px}
+
+  .contact{background:linear-gradient(160deg,#0f2136,#0a1220);border:1px solid var(--line);border-radius:22px;padding:60px 40px;text-align:center}
+  .contact p{color:var(--mut);margin:12px auto 32px;max-width:440px}
+  .contact .cta{justify-content:center}
+
+  footer{padding:36px 0;color:var(--mut);font-size:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:var(--mut)}
+  footer a:hover{color:var(--ink)}
+
+  @media(max-width:860px){
+    .grid,.steps{grid-template-columns:1fr 1fr}
+    .about{grid-template-columns:1fr;padding:32px 26px}
+    nav a:not(.nav-cta){display:none}
+  }
+  @media(max-width:560px){
+    .grid,.steps{grid-template-columns:1fr}
+    .hero{padding:64px 0}
+    section{padding:56px 0}
+    .contact{padding:44px 22px}
+    .meta{gap:16px}
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="logo">Ibrahim<span>Zid</span></div>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Ibrahim<em>Zid</em></a>
     <nav>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp me</a>
     </nav>
-  </header>
+  </div>
+</header>
+
+<div class="wrap" id="top">
 
   <div class="hero">
-    <span class="tag">Available for freelance projects</span>
-    <h1>Websites and landing pages that <em>win you customers</em></h1>
-    <p>I'm Ibrahim, a web developer and UI/UX designer based in Egypt. I design and build fast, modern, mobile-first sites with Next.js, React and Tailwind CSS — and I handle everything from the first sketch to launch.</p>
+    <span class="eyebrow"><span class="dot"></span> Available for new projects</span>
+    <h1>Websites that turn visitors into <em>customers</em>.</h1>
+    <p class="lede">I'm Ibrahim, a web developer and UI/UX designer. I design and build fast, mobile-first websites and landing pages with Next.js, React and Tailwind CSS, from the first sketch to launch.</p>
     <div class="cta">
       <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Chat on WhatsApp</a>
-      <a class="btn btn-o" href="#services">See services</a>
+      <a class="btn btn-o" href="#work">See my work</a>
+    </div>
+    <div class="meta">
+      <span><i>◆</i> Based in Egypt, working worldwide</span>
+      <span><i>◆</i> Replies the same day</span>
+      <span><i>◆</i> You see progress at every step</span>
     </div>
   </div>
 
   <section id="services">
-    <h2>Services</h2>
-    <p class="sub">Clear scope, clear price, no surprises. Introductory rates while I build my client base.</p>
+    <span class="label">Services</span>
+    <h2>What I build for you</h2>
+    <p class="sub">Clear scope, clear price, no surprises. Introductory rates while I grow my client base.</p>
     <div class="grid">
       <div class="card">
         <h3>Landing Pages</h3>
-        <p>A focused, high-converting page for your product, service or campaign. Design, copy structure, build and launch.</p>
-        <span class="price">from $50</span>
+        <p>One focused page for your product, service or campaign, designed to convert. Copy structure, design, build and launch included.</p>
+        <span class="tag">from $50</span>
       </div>
       <div class="card">
         <h3>Business Websites</h3>
-        <p>A complete multi-page site for your business: home, services, about, contact. Fast, responsive and easy to update.</p>
-        <span class="price">from $150</span>
+        <p>A complete multi-page site: home, services, about, contact. Fast, responsive on every device, and easy for you to update.</p>
+        <span class="tag">from $150</span>
       </div>
       <div class="card">
         <h3>UI/UX Design</h3>
         <p>Clean, usable interfaces for websites and web apps. Wireframes, user flows and polished screens ready for development.</p>
-        <span class="price">from $15/hour</span>
+        <span class="tag">from $15/hour</span>
       </div>
     </div>
   </section>
 
   <section id="work">
-    <h2>Selected work</h2>
-    <p class="sub">Real projects I designed and built myself, end to end.</p>
+    <span class="label">Selected work</span>
+    <h2>Real projects, built end to end</h2>
+    <p class="sub">Every project below is live code I designed and developed myself. Click through and inspect it.</p>
     <div class="grid">
       <div class="card proj">
-        <h3>Helm — AI marketing workspace</h3>
-        <p>A full production web platform with accounts, approvals and AI agents that run marketing tasks. Next.js, Turso database, deployed on Vercel.</p>
-        <a href="https://github.com/ibrahimzed24-a11y/marketing-os-fullstack" target="_blank" rel="noopener">View project →</a>
+        <a href="https://github.com/ibrahimzed24-a11y/marketing-os-fullstack" target="_blank" rel="noopener">
+          <span class="arrow">↗</span>
+          <h3>Helm: AI marketing workspace</h3>
+          <p>A production web platform with accounts, approval flows and AI agents that run marketing tasks.</p>
+          <div class="stack"><b>Stack:</b> Next.js · Turso · Vercel</div>
+        </a>
       </div>
       <div class="card proj">
-        <h3>Mela Rossa — restaurant website</h3>
-        <p>A complete restaurant website with menu presentation and contact flow, built with clean, fast static tech.</p>
-        <a href="https://github.com/ibrahimzed24-a11y/Mela-Rossa-website" target="_blank" rel="noopener">View project →</a>
+        <a href="https://github.com/ibrahimzed24-a11y/Mela-Rossa-website" target="_blank" rel="noopener">
+          <span class="arrow">↗</span>
+          <h3>Mela Rossa: restaurant website</h3>
+          <p>A complete restaurant site with menu presentation and a contact flow, built with clean, fast static tech.</p>
+          <div class="stack"><b>Stack:</b> HTML · CSS · JavaScript</div>
+        </a>
       </div>
       <div class="card proj">
-        <h3>eSIM store — e-commerce front</h3>
-        <p>A storefront for digital eSIM products: product pages, checkout flow and mobile-first design.</p>
-        <a href="https://github.com/ibrahimzed24-a11y/esim-nilesupplies" target="_blank" rel="noopener">View project →</a>
+        <a href="https://github.com/ibrahimzed24-a11y/esim-nilesupplies" target="_blank" rel="noopener">
+          <span class="arrow">↗</span>
+          <h3>Nile Supplies: eSIM storefront</h3>
+          <p>A storefront for digital eSIM products: product pages, checkout flow and mobile-first design.</p>
+          <div class="stack"><b>Stack:</b> Next.js · Tailwind CSS</div>
+        </a>
       </div>
     </div>
   </section>
 
   <section id="process">
+    <span class="label">Process</span>
     <h2>How we work together</h2>
-    <p class="sub">Simple, transparent, and you see progress at every step.</p>
+    <p class="sub">Simple and transparent: you approve each step before the next one starts.</p>
     <div class="steps">
-      <div class="step"><b>1 — Brief</b><p>You tell me about your business and what the site must achieve. I reply with scope, price and timeline.</p></div>
-      <div class="step"><b>2 — Design</b><p>You get a visual design to review and approve before any code is written.</p></div>
-      <div class="step"><b>3 — Build</b><p>I develop the site and share a live preview link so you can test it on your own phone.</p></div>
-      <div class="step"><b>4 — Launch</b><p>We go live, and I hand you everything: code, accounts and a short guide.</p></div>
+      <div class="step"><b>01</b><h4>Brief</h4><p>You tell me about your business and what the site must achieve. I reply with scope, price and timeline.</p></div>
+      <div class="step"><b>02</b><h4>Design</h4><p>You get a visual design to review and approve before a single line of code is written.</p></div>
+      <div class="step"><b>03</b><h4>Build</h4><p>I develop the site and share a live preview link, so you can test it on your own phone.</p></div>
+      <div class="step"><b>04</b><h4>Launch</h4><p>We go live, and I hand you everything: the code, the accounts and a short guide.</p></div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="about">
+    <div class="about">
+      <div>
+        <span class="label">Why me</span>
+        <h2>Built on real discipline</h2>
+        <p>Before writing code, I spent five years in the kitchens of 5-star Red Sea resorts, an environment where timing, quality and calm under pressure are non-negotiable. I bring the same standards to every website I ship: on time, exactly as agreed, no excuses.</p>
+      </div>
+      <div class="points">
+        <div class="point"><i>✓</i><p>One person, full ownership<small>Design, build and launch. No hand-offs, nothing lost in translation.</small></p></div>
+        <div class="point"><i>✓</i><p>Fast by default<small>Static-first builds that load quickly and rank better on Google.</small></p></div>
+        <div class="point"><i>✓</i><p>Hospitality mindset<small>Five years serving international guests. I understand businesses that live on first impressions.</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
     <div class="contact">
-      <h2>Let's build your site</h2>
-      <p>Message me on WhatsApp or email — I usually reply the same day.</p>
+      <span class="label">Let's talk</span>
+      <h2>Tell me about your project</h2>
+      <p>Message me on WhatsApp or email with what you need, and I usually reply the same day with next steps.</p>
       <div class="cta">
         <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp: +20 120 345 5111</a>
-        <a class="btn btn-p" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">ibrahim.zed24@gmail.com</a>
+        <a class="btn btn-o" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">ibrahim.zed24@gmail.com</a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Ibrahim Zid — Web Developer & UI/UX Designer, Cairo, Egypt
+    <span>© 2026 Ibrahim Zid · Web Developer & UI/UX Designer</span>
+    <span><a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a> · Cairo, Egypt</span>
   </footer>
 </div>
 </body>
