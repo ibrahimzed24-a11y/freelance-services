@@ -7,9 +7,14 @@
 <meta name="description" content="Freelance web designer and developer. Landing pages, small business websites, UI/UX, SEO and AI-search visibility, GA4 and Tag Manager setup, site speed and automation. One prototype first. Works with clients worldwide.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="favicon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/dmsans-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500 600;font-display:swap;src:url(fonts/caveat-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/dmsans-normal.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-italic.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/fraunces-normal.woff2) format('woff2')}
+</style>
 <style>
   :root{
     --paper:#F5EEE2; --ink:#231B16; --terra:#C8553D; --sand:#E6D8BF; --olive:#5E6B4A;
@@ -54,7 +59,7 @@
   .hero-note{margin-top:34px;font-size:24px;transform:rotate(-1.5deg);display:inline-block}
 
   .polaroid{justify-self:center;background:#fff;padding:14px 14px 58px;box-shadow:0 18px 40px rgba(35,27,22,.22);transform:rotate(2.2deg);position:relative;max-width:380px;width:100%}
-  .polaroid img{width:100%;display:block;aspect-ratio:4/4.6;object-fit:cover}
+  .polaroid img{width:100%;height:auto;display:block;aspect-ratio:4/4.6;object-fit:cover}
   .polaroid figcaption{font-family:'Caveat',cursive;color:var(--terra);font-size:26px;text-align:center;margin-top:14px}
   .tape{position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(-3deg);width:110px;height:32px;background:rgba(230,216,191,.85);box-shadow:0 2px 5px rgba(35,27,22,.12)}
 
@@ -108,6 +113,9 @@
   footer a:hover{color:var(--ink)}
 
   @media(max-width:880px){
+    .audit-form{grid-template-columns:1fr;padding:26px}
+    .spread{grid-template-columns:1fr;gap:40px}
+    .p2{margin-top:0}
     .hero{grid-template-columns:1fr;gap:48px;padding:52px 0 64px}
     .polaroid{max-width:330px;transform:rotate(1.5deg)}
     .grid{grid-template-columns:1fr 1fr}
@@ -142,6 +150,36 @@
   .promise h3{font-size:22px;margin-bottom:8px;color:#F5EEE2}
   .promise p{color:#E6D8BF;font-size:15.5px;max-width:760px}
   @media(max-width:860px){.start,.tiers{grid-template-columns:1fr}.tier.pick{transform:none}}
+  .audit-form{background:var(--sand);border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr 1fr auto;gap:18px;align-items:end;box-shadow:0 14px 34px rgba(35,27,22,.12);max-width:980px}
+  .audit-form label{display:grid;gap:8px;font-weight:600;font-size:14.5px}
+  .audit-form input[type=text],.audit-form input[type=email]{font:inherit;font-weight:500;padding:14px 16px;border-radius:12px;border:2px solid rgba(35,27,22,.14);background:#FBF6EC;color:var(--ink)}
+  .audit-form input:focus{outline:none;border-color:var(--terra)}
+  .audit-form .btn{border:0;cursor:pointer;font-family:inherit}
+  .audit-ok,.audit-err{grid-column:1/-1;font-family:'Caveat',cursive;font-size:26px;color:var(--olive)}
+  .audit-err{color:var(--terra)}
+  .spread{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:900px}
+  .page{position:relative;margin:0;background:#FBF6EC;padding:18px 18px 14px;box-shadow:0 14px 30px rgba(35,27,22,.18);background-image:radial-gradient(rgba(35,27,22,.13) 1px,transparent 1.2px);background-size:22px 22px}
+  .p1{transform:rotate(-1.6deg)}.p2{transform:rotate(1.4deg);margin-top:22px}
+  .page svg{width:100%;height:auto;display:block}
+  .page figcaption{font-family:'Caveat',cursive;color:var(--terra);font-size:24px;text-align:center;margin-top:4px}
+  .page .tape{position:absolute;top:-14px;width:90px;height:28px;background:rgba(230,216,191,.88);box-shadow:0 2px 5px rgba(35,27,22,.12)}
+  .t1{left:24px;transform:rotate(-6deg)}.t2{right:30px;transform:rotate(5deg)}
+  .ba{position:relative;max-width:980px;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(35,27,22,.22);user-select:none;background:#FBF6EC}
+  .ba-pane{padding:34px 36px 40px;min-height:330px;display:flex;flex-direction:column;justify-content:center}
+  .ba-pane.is-top{position:absolute;inset:0;clip-path:inset(0 50% 0 0);background:#E6D8BF}
+  .ba-score{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(64px,10vw,104px);line-height:1;letter-spacing:-2px}
+  .ba-pane.is-top .ba-score{color:var(--terra)}.ba-pane:not(.is-top) .ba-score{color:var(--olive)}
+  .ba-pane ul{list-style:none;margin-top:18px;display:grid;gap:6px;font-size:17px}
+  .ba-pane li b{font-family:'Fraunces',serif;font-weight:700}
+  .ba-pane .hand{font-size:26px;font-weight:600}
+  .ba-line{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--terra);transform:translateX(-1.5px);pointer-events:none}
+  .ba-line span{position:absolute;top:50%;left:50%;width:46px;height:46px;border-radius:50%;background:var(--terra);transform:translate(-50%,-50%);box-shadow:0 4px 12px rgba(35,27,22,.3);border:3px solid #fff}
+  .ba-line span::before{content:"\2194";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:20px}
+  .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+  .ba-note{margin-top:14px;color:var(--mut);font-size:14px;max-width:760px}
+  .ba-pane.is-top{padding-right:54%}
+  .ba-pane:not(.is-top){padding-left:54%}
+  @media(max-width:880px){.audit-form{grid-template-columns:1fr;padding:26px}.spread{grid-template-columns:1fr;gap:40px}.p2{margin-top:0}.ba-pane{padding:24px 14px 28px;min-height:300px}.ba-pane.is-top{padding-right:56%}.ba-pane:not(.is-top){padding-left:56%}.ba-score{font-size:56px;letter-spacing:-1px}.ba-pane ul{font-size:13px}.ba-pane .hand{font-size:22px}}
 </style>
 <!-- seo-block-start -->
 <link rel="canonical" href="https://freelance-services-zid16.vercel.app/">
@@ -171,9 +209,9 @@ if(n)gtag('event',n,{link_url:u});});
 <body>
 <header>
   <div class="wrap bar">
-    <a href="#top" aria-label="Ibrahim Zid, home"><img class="logo-img" src="logo-final-header-transparent.svg" alt="Ibrahim Zid"><img class="logo-stacked" src="logo-final-header-stacked-transparent.svg" alt="Ibrahim Zid"></a>
+    <a href="#top" aria-label="Ibrahim Zid, home"><img class="logo-img" width="272" height="64" src="logo-final-header-transparent.svg" alt="Ibrahim Zid"><img class="logo-stacked" width="114" height="60" src="logo-final-header-stacked-transparent.svg" alt="Ibrahim Zid"></a>
     <nav>
-      <a href="#work">Work</a>
+      <a href="#audit">Free audit</a>
       <a href="#how">How I work</a>
       <a href="#services">Services</a>
       <a href="#packages">Packages</a>
@@ -191,13 +229,13 @@ if(n)gtag('event',n,{link_url:u});});
       <p class="lede">Landing pages, small business sites and app screens. One prototype first, you approve it, then I build the rest.</p>
       <div class="cta">
         <a class="btn btn-t" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Tell me about your project</a>
-        <a class="btn-plain" href="#work">See my work</a>
+        <a class="btn-plain" href="#audit">Get a free mini-audit</a>
       </div>
       <span class="hand hero-note">websites that feel like someone made them.</span>
     </div>
     <figure class="polaroid">
       <span class="tape"></span>
-      <img src="portrait.jpg" alt="Ibrahim Zid, web designer, in his Cairo workspace">
+      <img src="portrait.jpg" width="640" height="953" fetchpriority="high" alt="Ibrahim Zid, web designer, in his Cairo workspace">
       <figcaption>Cairo, Egypt</figcaption>
     </figure>
   </div>
@@ -344,36 +382,104 @@ if(n)gtag('event',n,{link_url:u});});
     </div>
 </section>
 
-  <section id="work">
-    <span class="kicker">real work, live on the internet</span>
-    <h2>Things I designed and built</h2>
-    <p class="sub">These are my own projects, not mockups. Open them, click around, judge for yourself.</p>
-    <div class="grid">
-      <div class="card proj">
-        <a href="https://gate-31-up.vercel.app" target="_blank" rel="noopener">
-          <span class="arrow">↗</span>
-          <h3>Gate 31</h3>
-          <p>A DJ web app with a full library, decks and mixer, designed around a light neumorphic look with a dark mode.</p>
-          <div class="stack">Web app · live</div>
-        </a>
-      </div>
-      <div class="card proj">
-        <a href="https://marketing-os-fullstack.vercel.app" target="_blank" rel="noopener">
-          <span class="arrow">↗</span>
-          <h3>Helm</h3>
-          <p>An AI marketing operations platform: accounts, approval flows and agents that run marketing tasks.</p>
-          <div class="stack">Web platform · live</div>
-        </a>
-      </div>
-      <div class="card proj">
-        <a href="https://nileharvest-website.vercel.app" target="_blank" rel="noopener">
-          <span class="arrow">↗</span>
-          <h3>Nile Harvest</h3>
-          <p>A website for a food-sourcing desk exporting from Egypt: clear offer, product story and contact flow.</p>
-          <div class="stack">Business website · live</div>
-        </a>
-      </div>
+  <section id="audit">
+    <span class="kicker">a free look at your site</span>
+    <h2>Send me your website. I'll send back 3 things I'd fix.</h2>
+    <p class="sub">Real notes from me, not an automated report. They arrive by email within 48 hours. No call, no pressure.</p>
+    <form class="audit-form" id="auditForm" action="https://formsubmit.co/ibrahim.zed24@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Free mini-audit request">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <label>Your website address<input type="text" name="website" placeholder="yourbusiness.com" required></label>
+      <label>Where should I send my notes?<input type="email" name="email" placeholder="you@yourbusiness.com" required></label>
+      <button class="btn btn-t" type="submit">Send me my 3 notes</button>
+      <p class="audit-ok" id="auditOk" role="status" hidden>Got it, thank you. I'll look at your site myself and email you 3 notes within 48 hours.</p>
+      <p class="audit-err" id="auditErr" role="status" hidden>That did not go through. Please email me at ibrahim.zed24@gmail.com with your website address instead.</p>
+    </form>
+  </section>
+
+  <section id="notebook">
+    <span class="kicker">how I think about a page</span>
+    <h2>Paper first, screen second</h2>
+    <p class="sub">Every page starts as a sketch. I decide what it has to say before I choose a single colour.</p>
+    <div class="spread">
+      <figure class="page p1">
+        <span class="tape t1"></span>
+        <svg viewBox="0 0 460 420" aria-label="Pencil sketch of a page layout with handwritten notes">
+          <defs><filter id="wob"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter></defs>
+          <g filter="url(#wob)" fill="none" stroke="#231B16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="60" y="70" width="200" height="330" rx="6"/>
+            <path d="M60 104H260"/><path d="M72 88h40"/><path d="M226 84h22M226 92h22"/>
+            <path d="M80 140h130M80 156h95"/><path d="M80 190h60l8 14h-68z" />
+            <rect x="80" y="230" width="68" height="40" rx="4"/><rect x="168" y="230" width="68" height="40" rx="4"/>
+            <path d="M80 300h156M80 314h120"/><path d="M80 350h90v26H80z"/>
+          </g>
+          <g filter="url(#wob)" fill="none" stroke="#C8553D" stroke-width="2.4" stroke-linecap="round">
+            <path d="M300 118c-24-6-40 2-50 16"/><path d="M250 128l-2 14M250 128l14 2"/>
+            <path d="M310 214c-26 8-40 20-52 40"/><path d="M258 254l10-6M258 254l2-12"/>
+            <path d="M296 372c-24 4-38-4-48-12"/><path d="M248 360l12 0M248 360l6 10"/>
+            <ellipse cx="170" cy="362" rx="52" ry="24"/>
+          </g>
+          <g font-family="Caveat, cursive" fill="#C8553D" font-size="22">
+            <text x="268" y="106" transform="rotate(-3 268 106)">one thing to say</text>
+            <text x="266" y="206" transform="rotate(2 266 206)">thumb reach?</text>
+            <text x="262" y="394" transform="rotate(-2 262 394)">the one button</text>
+          </g>
+          <text x="60" y="46" font-family="Caveat, cursive" font-size="28" fill="#231B16">1. who is it for?</text>
+        </svg>
+        <figcaption>sketch, 10 minutes, no screen</figcaption>
+      </figure>
+      <figure class="page p2">
+        <span class="tape t2"></span>
+        <svg viewBox="0 0 460 420" aria-label="The same layout as a coloured design with notes">
+          <defs><filter id="wob2"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="9"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter></defs>
+          <g filter="url(#wob2)">
+            <rect x="60" y="70" width="200" height="330" rx="10" fill="#F5EEE2" stroke="#231B16" stroke-width="2.2"/>
+            <rect x="72" y="84" width="44" height="10" rx="5" fill="#231B16"/>
+            <rect x="216" y="82" width="34" height="14" rx="7" fill="#C8553D"/>
+            <rect x="78" y="124" width="150" height="14" rx="4" fill="#231B16"/>
+            <rect x="78" y="146" width="104" height="14" rx="4" fill="#231B16"/>
+            <rect x="78" y="176" width="140" height="8" rx="4" fill="#6f6155" opacity=".6"/>
+            <rect x="78" y="194" width="110" height="8" rx="4" fill="#6f6155" opacity=".6"/>
+            <rect x="78" y="220" width="84" height="28" rx="14" fill="#C8553D"/>
+            <rect x="78" y="272" width="72" height="52" rx="8" fill="#E6D8BF"/>
+            <rect x="170" y="272" width="72" height="52" rx="8" fill="#E6D8BF"/>
+            <rect x="78" y="340" width="164" height="38" rx="8" fill="#5E6B4A" opacity=".85"/>
+          </g>
+          <g filter="url(#wob2)" fill="none" stroke="#5E6B4A" stroke-width="2.4" stroke-linecap="round">
+            <path d="M300 146c-20-2-36 4-50 14"/><path d="M252 160l12-6M252 160l8 10"/>
+            <path d="M310 240c-26 0-44 -4-64-12"/><path d="M246 228l12 -2M246 228l8 10"/>
+          </g>
+          <g font-family="Caveat, cursive" fill="#5E6B4A" font-size="22">
+            <text x="268" y="140" transform="rotate(2 268 140)">big, calm headline</text>
+            <text x="270" y="258" transform="rotate(-2 270 258)">thumb-height button</text>
+          </g>
+          <text x="60" y="46" font-family="Caveat, cursive" font-size="28" fill="#231B16">2. now on screen</text>
+        </svg>
+        <figcaption>same layout, then colour and type</figcaption>
+      </figure>
     </div>
+  </section>
+
+  <section id="then-and-now">
+    <span class="kicker">my own page, measured</span>
+    <h2>I sped up my own page, and here are the numbers</h2>
+    <p class="sub">The same design before and after a speed pass: smaller images, fonts served from the site, no layout jumping. Drag the handle.</p>
+    <div class="ba" id="ba">
+      <div class="ba-pane">
+        <span class="hand">after</span>
+        <div class="ba-score">89</div>
+        <ul><li>Largest content shown: <b>3.5 s</b></li><li>Layout shift: <b>0.012</b></li><li>Page weight: <b>437 KB</b></li></ul>
+      </div>
+      <div class="ba-pane is-top" id="baTop">
+        <span class="hand">before</span>
+        <div class="ba-score">80</div>
+        <ul><li>Largest content shown: <b>4.3 s</b></li><li>Layout shift: <b>0.114</b></li><li>Page weight: <b>569 KB</b></li></ul>
+      </div>
+      <div class="ba-line" id="baLine"><span></span></div>
+      <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Compare the page before and after the speed pass">
+    </div>
+    <p class="ba-note">Google Lighthouse performance score, mobile settings, median of 3 runs on my own page. Lab tests run on my computer, so a real phone will vary. Weight includes the analytics script.</p>
   </section>
 
   <section id="how">
@@ -405,9 +511,24 @@ if(n)gtag('event',n,{link_url:u});});
   </section>
 
   <footer>
-    <a href="#top" aria-label="Back to top"><img class="foot-sticker" src="avatar-sticker-800.svg" alt="Ibrahim Zid"></a>
+    <a href="#top" aria-label="Back to top"><img class="foot-sticker" width="110" height="110" loading="lazy" src="avatar-sticker-800.svg" alt="Ibrahim Zid"></a>
     <span>© 2026 Ibrahim Zid · Cairo, Egypt · <a href="https://github.com/ibrahimzed24-a11y" target="_blank" rel="noopener">GitHub</a></span>
   </footer>
 </div>
+<script>
+(function(){
+  var r=document.getElementById('baRange'),t=document.getElementById('baTop'),l=document.getElementById('baLine');
+  function u(){var v=r.value;t.style.clipPath='inset(0 '+(100-v)+'% 0 0)';l.style.left=v+'%';}
+  r.addEventListener('input',u);u();
+  var f=document.getElementById('auditForm');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(f);
+    fetch('https://formsubmit.co/ajax/ibrahim.zed24@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:d})
+      .then(function(x){if(!x.ok)throw 0;document.getElementById('auditErr').hidden=true;document.getElementById('auditOk').hidden=false;f.querySelectorAll('input,button').forEach(function(i){i.disabled=true});})
+      .catch(function(){document.getElementById('auditErr').hidden=false;});
+  });
+})();
+</script>
 </body>
 </html>
