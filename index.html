@@ -386,7 +386,7 @@ if(n)gtag('event',n,{link_url:u});});
     <span class="kicker">a free look at your site</span>
     <h2>Send me your website. I'll send back 3 things I'd fix.</h2>
     <p class="sub">Real notes from me, not an automated report. They arrive by email within 48 hours. No call, no pressure.</p>
-    <form class="audit-form" id="auditForm" action="mailto:ibrahim.zed24@gmail.com" method="post">
+    <form class="audit-form" id="auditForm" action="https://api.web3forms.com/submit" method="post">
       <label>Your website address<input type="text" name="website" placeholder="yourbusiness.com" required></label>
       <label>Where should I send my notes?<input type="email" name="email" placeholder="you@yourbusiness.com" required></label>
       <button class="btn btn-t" type="submit">Send me my 3 notes</button>
@@ -522,11 +522,17 @@ if(n)gtag('event',n,{link_url:u});});
   function msg(){var w=f.website.value.trim(),m=f.email.value.trim();return 'Hi Ibrahim, please look at my website: '+w+'. You can reach me at '+m+'.';}
   function upd(){wa.href='https://wa.me/201203455111?text='+encodeURIComponent(msg());}
   f.addEventListener('input',upd);upd();
+  function fallback(){document.getElementById('auditOk').textContent="That did not go through, so I opened an email for you instead. Just press send, or use the WhatsApp link. I'll email you 3 notes within 48 hours.";document.getElementById('auditOk').hidden=false;location.href='mailto:ibrahim.zed24@gmail.com?subject='+encodeURIComponent('Free mini-audit request')+'&body='+encodeURIComponent(msg());}
   f.addEventListener('submit',function(e){
     e.preventDefault();
     if(!f.website.value.trim()||!f.email.value.trim()){document.getElementById('auditErr').hidden=false;return;}
-    document.getElementById('auditErr').hidden=true;document.getElementById('auditOk').hidden=false;
-    location.href='mailto:ibrahim.zed24@gmail.com?subject='+encodeURIComponent('Free mini-audit request')+'&body='+encodeURIComponent(msg());
+    document.getElementById('auditErr').hidden=true;
+    var d=new FormData();d.append('access_key','51bcd0dc-107f-47b8-b15e-084c3256eddd');d.append('subject','Free mini-audit request');d.append('from_name','Website mini-audit form');d.append('website',f.website.value.trim());d.append('email',f.email.value.trim());d.append('botcheck','');
+    var btn=f.querySelector('button');btn.disabled=true;
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:d})
+      .then(function(r){return r.json();})
+      .then(function(j){if(!j.success)throw 0;document.getElementById('auditOk').textContent="Got it, thank you. I'll look at your site myself and email you 3 notes within 48 hours.";document.getElementById('auditOk').hidden=false;f.querySelectorAll('input').forEach(function(i){i.disabled=true});})
+      .catch(function(){btn.disabled=false;fallback();});
   });
 })();
 </script>
