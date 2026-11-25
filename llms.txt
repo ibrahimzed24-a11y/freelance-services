@@ -1,0 +1,15 @@
+# Ibrahim Zid
+
+> Freelance web designer and developer based in Cairo, Egypt, working with small businesses worldwide. Landing pages, small business websites, UI/UX, SEO and AI-answer visibility (GEO/AEO), GA4 and Tag Manager setup, site speed, social content, CRM and email automation, and AI chat helpers. Works in English and Arabic. One prototype first, approved before the rest is built.
+
+## Pages
+- [Home, services and work](https://freelance-services-zid16.vercel.app/): services, process and live projects
+
+## Live projects (own work)
+- [Gate 31](https://gate-31-up.vercel.app): DJ web app with library, decks and mixer
+- [Helm](https://marketing-os-fullstack.vercel.app): AI marketing operations platform
+- [Nile Harvest](https://nileharvest-website.vercel.app): website for an Egyptian food-sourcing desk
+
+## Contact
+- Email: ibrahim.zed24@gmail.com
+- WhatsApp: https://wa.me/201203455111
