@@ -386,15 +386,13 @@ if(n)gtag('event',n,{link_url:u});});
     <span class="kicker">a free look at your site</span>
     <h2>Send me your website. I'll send back 3 things I'd fix.</h2>
     <p class="sub">Real notes from me, not an automated report. They arrive by email within 48 hours. No call, no pressure.</p>
-    <form class="audit-form" id="auditForm" action="https://formsubmit.co/ibrahim.zed24@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Free mini-audit request">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <form class="audit-form" id="auditForm" action="mailto:ibrahim.zed24@gmail.com" method="post">
       <label>Your website address<input type="text" name="website" placeholder="yourbusiness.com" required></label>
       <label>Where should I send my notes?<input type="email" name="email" placeholder="you@yourbusiness.com" required></label>
       <button class="btn btn-t" type="submit">Send me my 3 notes</button>
-      <p class="audit-ok" id="auditOk" role="status" hidden>Got it, thank you. I'll look at your site myself and email you 3 notes within 48 hours.</p>
-      <p class="audit-err" id="auditErr" role="status" hidden>That did not go through. Please email me at ibrahim.zed24@gmail.com with your website address instead.</p>
+      <a class="btn-plain" id="auditWa" href="https://wa.me/201203455111" target="_blank" rel="noopener">or send it on WhatsApp</a>
+      <p class="audit-ok" id="auditOk" role="status" hidden>Your email app should open with the message ready. Just press send, and I'll email you 3 notes within 48 hours. No email app? Use the WhatsApp link instead.</p>
+      <p class="audit-err" id="auditErr" role="status" hidden>Please enter your website address and your email first.</p>
     </form>
   </section>
 
@@ -520,13 +518,15 @@ if(n)gtag('event',n,{link_url:u});});
   var r=document.getElementById('baRange'),t=document.getElementById('baTop'),l=document.getElementById('baLine');
   function u(){var v=r.value;t.style.clipPath='inset(0 '+(100-v)+'% 0 0)';l.style.left=v+'%';}
   r.addEventListener('input',u);u();
-  var f=document.getElementById('auditForm');
+  var f=document.getElementById('auditForm'),wa=document.getElementById('auditWa');
+  function msg(){var w=f.website.value.trim(),m=f.email.value.trim();return 'Hi Ibrahim, please look at my website: '+w+'. You can reach me at '+m+'.';}
+  function upd(){wa.href='https://wa.me/201203455111?text='+encodeURIComponent(msg());}
+  f.addEventListener('input',upd);upd();
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var d=new FormData(f);
-    fetch('https://formsubmit.co/ajax/ibrahim.zed24@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:d})
-      .then(function(x){if(!x.ok)throw 0;document.getElementById('auditErr').hidden=true;document.getElementById('auditOk').hidden=false;f.querySelectorAll('input,button').forEach(function(i){i.disabled=true});})
-      .catch(function(){document.getElementById('auditErr').hidden=false;});
+    if(!f.website.value.trim()||!f.email.value.trim()){document.getElementById('auditErr').hidden=false;return;}
+    document.getElementById('auditErr').hidden=true;document.getElementById('auditOk').hidden=false;
+    location.href='mailto:ibrahim.zed24@gmail.com?subject='+encodeURIComponent('Free mini-audit request')+'&body='+encodeURIComponent(msg());
   });
 })();
 </script>
