@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Zid — Web Developer & UI/UX Designer</title>
+<meta name="description" content="I design and build fast, modern websites and landing pages. Next.js, React, Tailwind CSS. Based in Egypt, working with clients worldwide.">
+<style>
+  :root{
+    --bg:#0b0f17; --card:#121826; --ink:#e8ecf3; --mut:#9aa6ba;
+    --acc:#38bdf8; --acc2:#22c55e; --line:#1f2937;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px}
+  header{padding:26px 0;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-weight:800;font-size:20px;letter-spacing:.5px}
+  .logo span{color:var(--acc)}
+  nav a{color:var(--mut);text-decoration:none;margin-left:22px;font-size:15px}
+  nav a:hover{color:var(--ink)}
+  .hero{padding:84px 0 64px;text-align:center}
+  .hero .tag{display:inline-block;border:1px solid var(--line);color:var(--acc);border-radius:999px;padding:6px 16px;font-size:13px;margin-bottom:22px}
+  h1{font-size:clamp(30px,5vw,50px);line-height:1.15;font-weight:800}
+  h1 em{font-style:normal;color:var(--acc)}
+  .hero p{color:var(--mut);max-width:620px;margin:20px auto 34px;font-size:18px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 30px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px}
+  .btn-p{background:var(--acc);color:#06222f}
+  .btn-w{background:var(--acc2);color:#052e12}
+  .btn-o{border:1px solid var(--line);color:var(--ink)}
+  section{padding:56px 0}
+  h2{font-size:28px;margin-bottom:8px}
+  .sub{color:var(--mut);margin-bottom:34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .card h3{font-size:19px;margin-bottom:10px;color:var(--ink)}
+  .card p{color:var(--mut);font-size:15px}
+  .card .price{color:var(--acc);font-weight:700;margin-top:14px;display:block;font-size:15px}
+  .proj a{color:var(--acc);text-decoration:none;font-size:14px}
+  .proj a:hover{text-decoration:underline}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:s}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .step b{color:var(--acc);display:block;font-size:14px;margin-bottom:6px}
+  .step p{color:var(--mut);font-size:14px}
+  .contact{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:44px;text-align:center}
+  .contact p{color:var(--mut);margin:10px 0 26px}
+  footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+  @media(max-width:640px){nav{display:none}.contact{padding:30px 20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Ibrahim<span>Zid</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <span class="tag">Available for freelance projects</span>
+    <h1>Websites and landing pages that <em>win you customers</em></h1>
+    <p>I'm Ibrahim, a web developer and UI/UX designer based in Egypt. I design and build fast, modern, mobile-first sites with Next.js, React and Tailwind CSS — and I handle everything from the first sketch to launch.</p>
+    <div class="cta">
+      <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">Chat on WhatsApp</a>
+      <a class="btn btn-o" href="#services">See services</a>
+    </div>
+  </div>
+
+  <section id="services">
+    <h2>Services</h2>
+    <p class="sub">Clear scope, clear price, no surprises. Introductory rates while I build my client base.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Landing Pages</h3>
+        <p>A focused, high-converting page for your product, service or campaign. Design, copy structure, build and launch.</p>
+        <span class="price">from $50</span>
+      </div>
+      <div class="card">
+        <h3>Business Websites</h3>
+        <p>A complete multi-page site for your business: home, services, about, contact. Fast, responsive and easy to update.</p>
+        <span class="price">from $150</span>
+      </div>
+      <div class="card">
+        <h3>UI/UX Design</h3>
+        <p>Clean, usable interfaces for websites and web apps. Wireframes, user flows and polished screens ready for development.</p>
+        <span class="price">from $15/hour</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <p class="sub">Real projects I designed and built myself, end to end.</p>
+    <div class="grid">
+      <div class="card proj">
+        <h3>Helm — AI marketing workspace</h3>
+        <p>A full production web platform with accounts, approvals and AI agents that run marketing tasks. Next.js, Turso database, deployed on Vercel.</p>
+        <a href="https://github.com/ibrahimzed24-a11y/marketing-os-fullstack" target="_blank" rel="noopener">View project →</a>
+      </div>
+      <div class="card proj">
+        <h3>Mela Rossa — restaurant website</h3>
+        <p>A complete restaurant website with menu presentation and contact flow, built with clean, fast static tech.</p>
+        <a href="https://github.com/ibrahimzed24-a11y/Mela-Rossa-website" target="_blank" rel="noopener">View project →</a>
+      </div>
+      <div class="card proj">
+        <h3>eSIM store — e-commerce front</h3>
+        <p>A storefront for digital eSIM products: product pages, checkout flow and mobile-first design.</p>
+        <a href="https://github.com/ibrahimzed24-a11y/esim-nilesupplies" target="_blank" rel="noopener">View project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How we work together</h2>
+    <p class="sub">Simple, transparent, and you see progress at every step.</p>
+    <div class="steps">
+      <div class="step"><b>1 — Brief</b><p>You tell me about your business and what the site must achieve. I reply with scope, price and timeline.</p></div>
+      <div class="step"><b>2 — Design</b><p>You get a visual design to review and approve before any code is written.</p></div>
+      <div class="step"><b>3 — Build</b><p>I develop the site and share a live preview link so you can test it on your own phone.</p></div>
+      <div class="step"><b>4 — Launch</b><p>We go live, and I hand you everything: code, accounts and a short guide.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's build your site</h2>
+      <p>Message me on WhatsApp or email — I usually reply the same day.</p>
+      <div class="cta">
+        <a class="btn btn-w" href="https://wa.me/201203455111?text=Hi%20Ibrahim%2C%20I%20need%20a%20website%20for%20my%20business">WhatsApp: +20 120 345 5111</a>
+        <a class="btn btn-p" href="mailto:ibrahim.zed24@gmail.com?subject=Website%20project">ibrahim.zed24@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ibrahim Zid — Web Developer & UI/UX Designer, Cairo, Egypt
+  </footer>
+</div>
+</body>
+</html>
