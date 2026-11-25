@@ -1,11 +1,14 @@
 # Ibrahim Zid
 
-> Freelance web designer and developer based in Cairo, Egypt, working with small businesses worldwide. Landing pages, small business websites, UI/UX, SEO and AI-answer visibility (GEO/AEO), GA4 and Tag Manager setup, site speed, social content, CRM and email automation, and AI chat helpers. Works in English and Arabic. One prototype first, approved before the rest is built.
+> Freelance web designer for restaurants and hotels. Websites found on Google and in AI answers, local SEO, GA4 setup, menu and food-cost review. Background: five years as a chef and two as operations manager in Maldives hotels. Based in Cairo, works worldwide, in English and Arabic.
 
-Also offers, for restaurants and hotels: websites found on Google, menu and food-cost review, and food-safety checklists and training material (background: five years in luxury resort kitchens).
+## Offer
+- Restaurant and hotel websites, from $900
+- Menu and food-cost review, from $150
+- Growth audit (SEO, AI answers, speed, tracking), $149, credited if we continue
 
-## Pages
-- [Home, services and work](https://freelance-services-zid16.vercel.app/): services, process, free mini-audit and notes
+## Free mini-audit
+Send a website address, get 3 things to fix by email within 48 hours: https://freelance-services-zid16.vercel.app/#audit
 
 ## Contact
 - Email: ibrahim.zed24@gmail.com
