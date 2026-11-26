@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>جمر وزيتون | موقع مطعم تجريبي من Zsolution</title>
+<meta name="description" content="موقع مطعم تجريبي من Zsolution. «جمر وزيتون» مطعم من وحي الخيال وليس نشاطا حقيقيا.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/favicon-32.png">
+<meta name="theme-color" content="#1F1A14">
+
+<link rel="preload" href="/fonts/a4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/demo/restaurant/img/hero-800.webp" imagesrcset="/demo/restaurant/img/hero-800.webp 800w, /demo/restaurant/img/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<style>
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-normal.woff2);font-weight:100 900;font-display:swap}
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-italic.woff2);font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(/fonts/a4.woff2);font-weight:400;font-display:swap}@font-face{font-family:"IBM Plex Sans Arabic";src:url(/fonts/a7.woff2);font-weight:700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/dmsans-normal.woff2);font-weight:100 900;font-display:swap}
+:root{--cream:#FBF3E4;--card:#FFFAF0;--ink:#1F1A14;--mute:#5E5144;--ember:#B93A17;--emberd:#8F2C10;--olive:#3E4A1F;--gold:#E3A72F;--line:#E2D2B4}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 6vw}
+.skip{position:absolute;top:-60px;left:10px;background:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{top:10px}
+.sample{background:var(--gold);color:var(--ink);text-align:center;font-size:13px;font-weight:600;padding:8px 5vw;line-height:1.35}
+.sample a{text-underline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:rgba(251,243,228,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{max-width:1080px;margin:0 auto;padding:0 6vw;height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-family:Fraunces,serif;font-weight:700;font-size:22px;text-decoration:none;letter-spacing:-.01em}
+.brand i{color:var(--ember);font-weight:500}
+nav{display:none;gap:30px;font-weight:600;font-size:15px}
+nav a{text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--ember)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:99px;font:inherit;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ember);background:var(--ember);color:#fff;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{background:var(--emberd);border-color:var(--emberd);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn.sm{min-height:44px;padding:0 20px;font-size:15px}
+.hero{position:relative;min-height:calc(100svh - 64px - 34px);display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:slow 22s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(20,14,8,.55),rgba(20,14,8,.62))}
+@keyframes slow{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero .in{padding:70px 6vw;max-width:760px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{font-size:clamp(40px,8vw,76px);margin-bottom:20px}
+.hero p{font-size:clamp(17px,2.4vw,21px);max-width:560px;margin:0 auto 32px;color:#F6EBDA}
+.cta{display:grid;gap:12px;grid-template-columns:1fr;max-width:340px;margin:0 auto}
+.cta .btn{width:100%;min-height:54px}
+.facts{background:var(--ink);color:#F6EBDA}
+.facts .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.fact{padding:22px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,.14)}
+.fact:last-child{border:0}
+.fact b{display:block;font-family:Fraunces,serif;font-size:20px;color:#fff;margin-bottom:2px}
+.fact span{font-size:15px;color:#d9c9ae}
+section{padding:84px 0}
+.center{text-align:center}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--emberd);margin-bottom:12px}
+h2{font-size:clamp(32px,5vw,50px);margin-bottom:18px}
+.lead{max-width:600px;margin:0 auto;color:var(--mute);font-size:18px}
+.story{display:grid;gap:34px;align-items:center}
+.story img{border-radius:22px;aspect-ratio:3/2;object-fit:cover;width:100%;box-shadow:0 20px 50px -24px rgba(31,26,20,.5)}
+.story p{color:var(--mute);margin-bottom:14px}
+.feat{display:grid;gap:22px;margin-top:44px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-align:left;transition:transform .3s,box-shadow .3s}
+.dish:hover{transform:translateY(-5px);box-shadow:0 24px 40px -24px rgba(31,26,20,.45)}
+.dish img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.dish div{padding:20px 22px 24px}
+.dish h3{font-size:24px;margin-bottom:6px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.dish h3 em{font-family:"DM Sans";font-style:normal;font-size:19px;color:var(--ember);font-weight:700}
+.dish p{color:var(--mute);font-size:16px}
+.menu{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:460px;margin:30px auto 34px;background:#F0E4CB;padding:5px;border-radius:99px}
+.tabs button{font:inherit;font-weight:700;font-size:15px;min-height:46px;border:0;border-radius:99px;background:none;color:var(--mute);cursor:pointer;transition:.2s}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.tabs button:focus-visible,.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--olive);outline-offset:3px}
+.list{max-width:720px;margin:0 auto}
+.list[hidden]{display:none}
+.item{padding:20px 0;border-bottom:1px dashed var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 18px}
+.item h3{font-size:22px}
+.item b{font-weight:700;color:var(--ember);font-size:19px}
+.item p{grid-column:1/-1;color:var(--mute);font-size:16px}
+.note{text-align:center;color:var(--mute);font-size:14px;margin-top:24px}
+.gal{display:grid;gap:14px;margin-top:40px}
+.gal img{border-radius:22px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.visit{display:grid;gap:22px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 26px;text-align:center}
+.card h3{font-size:24px;margin-bottom:14px}
+.card p,.card li{color:var(--mute);font-size:17px}
+.card ul{list-style:none;padding:0}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.card li b{color:var(--ink);white-space:nowrap}.card li{font-size:16px}
+.res{background:var(--olive);color:#F6EBDA}
+.res h2{color:#fff}
+.res .kicker{color:#F4CB6E}
+.res .lead{color:#dfe5c9}
+form{max-width:560px;margin:36px auto 0;display:grid;gap:14px;text-align:left}
+.row2{display:grid;grid-template-columns:1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,select{font:inherit;font-size:17px;min-height:52px;padding:0 16px;border-radius:14px;border:2px solid transparent;background:#fff;color:var(--ink);width:100%}
+form .btn{background:var(--gold);border-color:var(--gold);color:var(--ink);min-height:56px;margin-top:6px}
+form .btn:hover{background:#fff;border-color:#fff}
+.ok{display:none;text-align:center;background:#fff;color:var(--ink);border-radius:18px;padding:22px;font-weight:600}
+.ok.on{display:block}
+footer{background:var(--ink);color:#d9c9ae;text-align:center;padding:44px 6vw 40px;font-size:15px}
+footer .brand{color:#fff;display:inline-block;margin-bottom:10px}
+footer p{max-width:560px;margin:6px auto}
+footer a{color:var(--gold);text-underline-offset:3px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(min-width:700px){
+nav{display:flex}
+.cta{grid-template-columns:1fr 1fr;max-width:480px}
+.facts .wrap{grid-template-columns:repeat(3,1fr)}
+.fact{border-bottom:0;border-right:1px solid rgba(255,255,255,.14);padding:28px 10px}
+.fact:last-child{border:0}
+.story{grid-template-columns:1fr 1fr;gap:56px}
+.feat{grid-template-columns:repeat(3,1fr)}
+.gal{grid-template-columns:1fr 1fr}
+.visit{grid-template-columns:1fr 1fr}
+.row2{grid-template-columns:1fr 1fr}
+}
+@media(max-width:699px){.story{text-align:center}.hd .btn{min-height:44px;padding:0 20px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero img{animation:none}.rv{opacity:1;transform:none;transition:none}.btn,.dish{transition:none}}
+body,h1,h2,h3,h4,.brand,.eyebrow,.kicker,.pr,.tot,em,b,i,input,select,textarea,button,summary,.btn{font-family:"IBM Plex Sans Arabic","DM Sans",system-ui,sans-serif!important;font-style:normal}.eyebrow,.kicker{letter-spacing:0}h1,h2,h3{letter-spacing:0;line-height:1.3}.hero h1{line-height:1.25}summary{padding:20px 0 20px 40px;text-align:right}summary::after{right:auto;left:6px}details{text-align:right}form{text-align:right}.grid figcaption{text-align:right}.lb{direction:ltr}.lb p{direction:rtl}</style>
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<div class="sample">موقع تجريبي من Zsolution، وليس نشاطا حقيقيا. <a href="/ar/hospitality/">تعرّف على ما تبنيه Zsolution</a></div>
+<header><div class="hd"><a class="brand" href="#top">جمر <i>و</i>زيتون</a><nav aria-label="الأقسام"><a href="#story">حكايتنا</a><a href="#menu">القائمة</a><a href="#visit">زيارتنا</a></nav><a class="btn sm" href="#reserve">احجز</a></div></header>
+<main id="main">
+<section class="hero" id="top" style="padding:0">
+<img src="/demo/restaurant/img/hero-800.webp" srcset="/demo/restaurant/img/hero-800.webp 800w, /demo/restaurant/img/hero.webp 1600w" sizes="100vw" alt="قاعة طعام دافئة في المساء بطاولات جاهزة وشموع وكؤوس" width="1600" height="900" fetchpriority="high">
+<div class="in">
+<p class="eyebrow">مشويات متوسطية</p>
+<h1>نار وزيت زيتون وخبز طيب.</h1>
+<p>طاولة حيّنا لعشاء هادئ. كل شيء يُطهى على نار مكشوفة، والخبز يخرج دافئا.</p>
+<div class="cta"><a class="btn" href="#reserve">احجز طاولة</a><a class="btn ghost" href="#menu">شاهد القائمة</a></div>
+</div>
+</section>
+<div class="facts"><div class="wrap">
+<div class="fact"><b>مفتوح اليوم</b><span>من 12:00 إلى 23:00</span></div>
+<div class="fact"><b>العنوان</b><span>12 شارع العيّنة، البلدة القديمة</span></div>
+<div class="fact"><b>العشاء</b><span>نرحب بمن يأتي دون حجز، وتُحفظ الطاولة 15 دقيقة</span></div>
+</div></div>
+
+<section id="story"><div class="wrap story">
+<img class="rv" src="/demo/restaurant/img/room.webp" alt="قاعة الطعام في المساء بطاولات جاهزة وشموع" width="1400" height="933" loading="lazy">
+<div class="rv"><p class="kicker">حكايتنا</p><h2>مطبخ صغير بمشواة كبيرة.</h2>
+<p>«جمر وزيتون» مبني على فكرة واحدة: طعام بسيط يُطهى جيدا. السمك والضأن على الفحم، والخضار من مزارعين قريبين، وتتغير القائمة بحسب ما هو أفضل هذا الأسبوع.</p>
+<p>تعال لغداء طويل، أو مائدة مقبلات مشتركة، أو عشاء هادئ بجانب النافذة.</p>
+<a class="btn" href="#reserve" style="margin-top:10px">احجز طاولتك</a></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap center">
+<p class="kicker">القائمة</p><h2>مطهوّ على النار ومشترك على الطاولة.</h2>
+<p class="lead">بعض الأطباق التي يطلبها الناس أولا.</p>
+<div class="feat">
+<article class="dish rv"><img src="/demo/restaurant/img/fish.webp" alt="سمك دنيس مشوي كامل مع ليمون محروق وأعشاب في طبق خزفي" width="900" height="1124" loading="lazy"><div><h3>دنيس مشوي <em>$26</em></h3><p>سمكة كاملة وليمون محروق وأعشاب طازجة.</p></div></article>
+<article class="dish rv"><img src="/demo/restaurant/img/lamb.webp" alt="كتف ضأن مطهو ببطء مع جزر مشوي ولبن" width="900" height="1124" loading="lazy"><div><h3>ضأن مطهو ببطء <em>$29</em></h3><p>ينفصل عن العظم بسهولة، مع جذور مشوية ولبن بارد.</p></div></article>
+<article class="dish rv"><img src="/demo/restaurant/img/mezze.webp" alt="مائدة مقبلات بحمص وسلطة وزيتون وخبز مسطح" width="900" height="1124" loading="lazy"><div><h3>مقبلات للمشاركة <em>$24</em></h3><p>حمص وفلفل مشوي وسلطة وزيتون وخبز مسطح دافئ.</p></div></article>
+</div>
+<div class="tabs" role="tablist" aria-label="أقسام القائمة" style="margin-top:56px"><button role="tab" id="t0" aria-selected="true" aria-controls="p0">المقبلات</button><button role="tab" id="t1" aria-selected="false" aria-controls="p1" tabindex="-1">الأطباق الرئيسية</button><button role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">الحلويات</button></div>
+<div class="list" id="p0" role="tabpanel" aria-labelledby="t0">
+<div class="item"><h3>خبز مسطح دافئ</h3><b>$6</b><p>يُخبز عند الطلب، مع زيت زيتون وزعتر.</p></div>
+<div class="item"><h3>حمص وفلفل مشوي</h3><b>$9</b><p>حمص وطحينة وليمون وفلفل مدخّن.</p></div>
+<div class="item"><h3>سلطة الحديقة</h3><b>$11</b><p>خيار وطماطم وأعشاب وزيتون وصلصة منعشة.</p></div>
+<div class="item"><h3>حلوم محمّر</h3><b>$12</b><p>مع عسل وزعتر وليمون مشوي.</p></div>
+</div>
+<div class="list" id="p1" role="tabpanel" aria-labelledby="t1" hidden>
+<div class="item"><h3>دنيس مشوي</h3><b>$26</b><p>سمكة كاملة وليمون محروق وأعشاب.</p></div>
+<div class="item"><h3>كتف ضأن مطهو ببطء</h3><b>$29</b><p>جذور مشوية ولبن.</p></div>
+<div class="item"><h3>أسياخ دجاج</h3><b>$19</b><p>متبّلة طوال الليل، تُقدَّم مع صلصة الثوم والأرز.</p></div>
+<div class="item"><h3>طبق خضار مشوية</h3><b>$17</b><p>باذنجان وكوسا وفلفل وصلصة أعشاب. نباتي.</p></div>
+</div>
+<div class="list" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+<div class="item"><h3>بقلاوة بالفستق</h3><b>$9</b><p>قطر العسل وكرة آيس كريم فانيلا.</p></div>
+<div class="item"><h3>كريمة زهر البرتقال</h3><b>$8</b><p>خفيفة وباردة وغير مفرطة الحلاوة.</p></div>
+<div class="item"><h3>شاي بالنعناع</h3><b>$4</b><p>أوراق طازجة، تُقدَّم في إبريق.</p></div>
+</div>
+<p class="note">قائمة تجريبية وأسعار من وحي الخيال. في مطعم حقيقي تُذكر هنا معلومات الحساسية.</p>
+</div></section>
+
+<section><div class="wrap center">
+<p class="kicker">القاعة</p><h2>ضوء دافئ وطاولات طويلة.</h2>
+<p class="lead">مقاعد لعشاء لشخصين، أو غداء لاثني عشر، وما بينهما.</p>
+<div class="gal"><img class="rv" src="/demo/restaurant/img/hero.webp" alt="طاولة مُعدّة للعشاء" width="1600" height="900" loading="lazy"><img class="rv" src="/demo/restaurant/img/dessert.webp" alt="بقلاوة مع كرة آيس كريم فانيلا" width="900" height="1124" loading="lazy"></div>
+</div></section>
+
+<section id="visit" class="menu"><div class="wrap center">
+<p class="kicker">زيارتنا</p><h2>تعال إلينا وابقَ قليلا.</h2>
+<div class="visit">
+<div class="card rv"><h3>ساعات العمل</h3><ul><li><span>الاثنين إلى الخميس</span><b>12:00 إلى 23:00</b></li><li><span>الجمعة والسبت</span><b>12:00 إلى 00:00</b></li><li><span>الأحد</span><b>12:00 إلى 22:00</b></li></ul></div>
+<div class="card rv"><h3>العنوان</h3><p>12 شارع العيّنة<br>البلدة القديمة<br>مدينة العيّنة</p><p style="margin-top:14px"><a class="btn sm ghost" href="#reserve" style="color:var(--ink)">احجز طاولة</a></p></div>
+</div>
+</div></section>
+
+<section class="res" id="reserve"><div class="wrap center">
+<p class="kicker">الحجوزات</p><h2>احجز طاولة.</h2>
+<p class="lead">اختر اليوم والوقت. تُحفظ طاولتك 15 دقيقة.</p>
+<form id="rf" novalidate>
+<div class="row2"><label>التاريخ<input type="date" id="d" required></label><label>الوقت<select id="t" required><option>12:00</option><option>13:00</option><option>14:00</option><option>18:00</option><option>19:00</option><option selected>20:00</option><option>21:00</option></select></label></div>
+<div class="row2"><label>الضيوف<select id="g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><label>اسمك<input id="n" autocomplete="name" required></label></div>
+<button class="btn" type="submit">احجز هذه الطاولة</button>
+<p class="ok" id="ok" role="status"></p>
+</form>
+</div></section>
+</main>
+<footer>
+<a class="brand" href="#top">جمر <i style="color:var(--gold)">و</i>زيتون</a>
+<p>هذا موقع تجريبي من Zsolution يُظهر كيف يمكن أن يبدو موقع المطعم. «جمر وزيتون» ليس نشاطا حقيقيا، ولا يُرسَل أي حجز.</p>
+<p><a href="/ar/hospitality/">العودة إلى Zsolution</a></p>
+</footer>
+<script>
+(function(){
+var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+function sel(i){tabs.forEach(function(t,k){var on=k==i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById('p'+k).hidden=!on})}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(i)});t.addEventListener('keydown',function(e){var k=e.key=='ArrowRight'?1:e.key=='ArrowLeft'?-1:0;if(k){var j=(i+k+tabs.length)%tabs.length;sel(j);tabs[j].focus()}})});
+var d=document.getElementById('d'),now=new Date();now.setDate(now.getDate()+1);d.min=new Date().toISOString().slice(0,10);d.value=now.toISOString().slice(0,10);
+document.getElementById('rf').addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('n').value.trim();var ok=document.getElementById('ok');
+if(!n){ok.textContent='أضف اسمك من فضلك.';ok.className='ok on';document.getElementById('n').focus();return}
+var dt=new Date(d.value+'T12:00:00');var ds=isNaN(dt)?d.value:dt.toLocaleDateString('ar-EG',{weekday:'long',day:'numeric',month:'long'});
+ok.textContent='شكرا يا '+n+'. كانت طاولتك لـ '+document.getElementById('g').value+' في '+ds+' الساعة '+document.getElementById('t').value+' ستُحفظ هنا. هذا موقع تجريبي، لذلك لم يُرسَل شيء.';ok.className='ok on'});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(x){x.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(x){io.observe(x)})}
+})();
+</script>
+</body>
+</html>

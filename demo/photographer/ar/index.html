@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>استوديو مارلو لايت | موقع مصوّر تجريبي من Zsolution</title>
+<meta name="description" content="موقع مصوّر تجريبي من Zsolution. «استوديو مارلو لايت» استوديو من وحي الخيال وليس نشاطا حقيقيا.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#17130F">
+<link rel="icon" href="/favicon-32.png">
+
+<link rel="preload" href="/fonts/a4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/demo/photographer/img/hero-800.webp" imagesrcset="/demo/photographer/img/hero-800.webp 800w, /demo/photographer/img/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<style>
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-normal.woff2);font-weight:100 900;font-display:swap}
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-italic.woff2);font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(/fonts/a4.woff2);font-weight:400;font-display:swap}@font-face{font-family:"IBM Plex Sans Arabic";src:url(/fonts/a7.woff2);font-weight:700;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/dmsans-normal.woff2);font-weight:100 900;font-display:swap}
+:root{--bg:#17130F;--bg2:#1F1A14;--card:#241E17;--cream:#F6EBDA;--mute:#CBB9A0;--cop:#E0A06A;--copd:#B9703A;--line:#3B3126}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 6vw}
+.skip{position:absolute;top:-60px;left:10px;background:#fff;color:#000;padding:10px 14px;border-radius:8px;z-index:200}
+.skip:focus{top:10px}
+.sample{background:var(--cop);color:#1a120a;text-align:center;font-size:13px;font-weight:700;padding:8px 5vw;line-height:1.35}
+.sample a{text-underline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:rgba(23,19,15,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{max-width:1120px;margin:0 auto;padding:0 6vw;height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-family:Fraunces,serif;font-weight:600;font-size:21px;text-decoration:none}
+.brand i{color:var(--cop)}
+nav{display:none;gap:30px;font-weight:600;font-size:15px}
+nav a{text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--cop)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:99px;font:inherit;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--cop);background:var(--cop);color:#1a120a;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream)}
+.btn.ghost:hover{background:var(--cream);color:#1a120a}
+.btn.sm{min-height:44px;padding:0 20px;font-size:15px}
+:focus-visible{outline:3px solid var(--cop);outline-offset:3px}
+.hero{position:relative;min-height:calc(100svh - 64px - 34px);display:grid;place-items:center;text-align:center;overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:slow 22s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(15,10,6,.45),rgba(15,10,6,.7))}
+@keyframes slow{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero .in{padding:70px 6vw;max-width:780px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cop);margin-bottom:18px}
+.hero h1{font-size:clamp(40px,8vw,80px);margin-bottom:20px}
+.hero p{font-size:clamp(17px,2.4vw,21px);max-width:560px;margin:0 auto 32px;color:#F1E3CE}
+.cta{display:grid;gap:12px;max-width:340px;margin:0 auto}
+.cta .btn{width:100%;min-height:54px}
+section{padding:84px 0}
+.center{text-align:center}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cop);margin-bottom:12px}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:18px}
+.lead{max-width:600px;margin:0 auto;color:var(--mute);font-size:18px}
+.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-width:520px;margin:30px auto 30px;background:var(--card);padding:5px;border-radius:26px}
+.tabs button{font:inherit;font-weight:700;font-size:15px;min-height:46px;border:0;border-radius:99px;background:none;color:var(--mute);cursor:pointer;transition:.2s}
+.tabs button[aria-pressed=true]{background:var(--cream);color:#1a120a}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.grid figure{flex:0 0 calc((100% - 10px)/2);position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/5;cursor:pointer;background:var(--card);padding:0;border:0;display:block;width:100%}
+.grid figure.hide{display:none}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.grid figure:hover img{transform:scale(1.05)}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(10,6,3,.8));font-size:14px;font-weight:600;text-align:left;opacity:0;transition:.3s}
+.grid figure:hover figcaption,.grid figure:focus-within figcaption{opacity:1}
+.grid button{all:unset;display:block;width:100%;height:100%;cursor:pointer}
+.grid button:focus-visible{outline:3px solid var(--cop);outline-offset:-3px}
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about{display:grid;gap:34px;align-items:center}
+.about img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;max-height:560px}
+.about p{color:var(--mute);margin-bottom:14px}
+.pk{display:grid;gap:18px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 26px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.card.hl{border-color:var(--cop);box-shadow:0 0 0 1px var(--cop)}
+.card h3{font-size:26px}
+.card .pr{font-family:Fraunces,serif;font-size:38px;color:var(--cop);margin:8px 0}
+.card ul{list-style:none;padding:0;margin:8px 0 22px;color:var(--mute);flex:1}
+.card li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.note{text-align:center;color:var(--mute);font-size:14px;margin-top:22px}
+.steps{display:grid;gap:18px;margin-top:44px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center}
+.step b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--cop);color:#1a120a;margin:0 auto 14px;font-family:Fraunces,serif;font-size:21px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{color:var(--mute);font-size:16px}
+details{max-width:720px;margin:0 auto;border-bottom:1px solid var(--line);text-align:left}
+details:first-of-type{margin-top:40px;border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-weight:700;padding:20px 40px 20px 0;position:relative;min-height:56px;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--cop);transition:transform .25s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{color:var(--mute);padding:0 0 20px}
+form{max-width:560px;margin:36px auto 0;display:grid;gap:14px;text-align:left}
+.row2{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,select,textarea{font:inherit;font-size:17px;min-height:52px;padding:12px 16px;border-radius:14px;border:2px solid transparent;background:#fff;color:#1a120a;width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{min-height:56px;margin-top:6px}
+.ok{display:none;text-align:center;background:var(--card);border:1px solid var(--cop);border-radius:18px;padding:22px;font-weight:600}
+.ok.on{display:block}
+footer{background:#0f0c09;color:var(--mute);text-align:center;padding:44px 6vw 40px;font-size:15px}
+footer .brand{color:var(--cream);display:inline-block;margin-bottom:10px}
+footer p{max-width:560px;margin:6px auto}
+footer a{color:var(--cop);text-underline-offset:3px}
+.lb{position:fixed;inset:0;background:rgba(8,5,3,.96);z-index:300;display:none;align-items:center;justify-content:center;padding:64px 14px 120px}
+.lb.on{display:flex}
+.lb img{max-height:100%;max-width:100%;width:auto;border-radius:10px;object-fit:contain;animation:fade .3s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:2px solid var(--cream);background:rgba(23,19,15,.7);color:var(--cream);font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb .x{top:10px;right:10px}
+.lb .pv{bottom:10px;left:calc(50% - 60px)}
+.lb .nx{bottom:10px;left:calc(50% + 12px)}
+.lb p{position:absolute;bottom:84px;left:14px;right:14px;text-align:center;font-size:14px;color:var(--mute);pointer-events:none}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(min-width:700px){
+nav{display:flex}
+.cta{grid-template-columns:1fr 1fr;max-width:480px}
+.grid{gap:14px}.grid figure{flex-basis:calc((100% - 42px)/4)}
+.tabs{grid-template-columns:repeat(4,1fr);border-radius:99px}
+.about{grid-template-columns:1fr 1fr;gap:56px}
+.pk,.steps{grid-template-columns:repeat(3,1fr)}
+.row2{grid-template-columns:1fr 1fr}
+.lb .pv{left:14px;bottom:auto;top:50%}
+.lb .nx{left:auto;right:14px;bottom:auto;top:50%}
+.lb p{bottom:18px}.lb{padding:64px 80px 56px}
+}
+@media(max-width:699px){.about{text-align:center}.hd .btn{min-height:44px;padding:0 20px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero img,.lb img{animation:none}.rv{opacity:1;transform:none;transition:none}.btn,.grid img{transition:none}}
+body,h1,h2,h3,h4,.brand,.eyebrow,.kicker,.pr,.tot,em,b,i,input,select,textarea,button,summary,.btn{font-family:"IBM Plex Sans Arabic","DM Sans",system-ui,sans-serif!important;font-style:normal}.eyebrow,.kicker{letter-spacing:0}h1,h2,h3{letter-spacing:0;line-height:1.3}.hero h1{line-height:1.25}summary{padding:20px 0 20px 40px;text-align:right}summary::after{right:auto;left:6px}details{text-align:right}form{text-align:right}.grid figcaption{text-align:right}.lb{direction:ltr}.lb p{direction:rtl}</style>
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<div class="sample">موقع تجريبي من Zsolution، وليس نشاطا حقيقيا. <a href="/ar/photographers/">تعرّف على ما تبنيه Zsolution</a></div>
+<header><div class="hd"><a class="brand" href="#top">استوديو مارلو <i>لايت</i></a><nav aria-label="الأقسام"><a href="#work">الأعمال</a><a href="#about">نبذة</a><a href="#packages">الباقات</a><a href="#faq">الأسئلة</a></nav><a class="btn sm" href="#enquire">استفسر</a></div></header>
+<main id="main">
+<section class="hero" id="top" style="padding:0">
+<img src="/demo/photographer/img/hero-800.webp" srcset="/demo/photographer/img/hero-800.webp 800w, /demo/photographer/img/hero.webp 1600w" sizes="100vw" alt="زوجان يمشيان متشابكي الأيدي على ممر ساحلي عشبي في يوم غائم هادئ" width="1600" height="900" fetchpriority="high">
+<div class="in">
+<p class="eyebrow">أعراس وصور شخصية وعائلات</p>
+<h1>لحظات حقيقية بضوء ناعم.</h1>
+<p>تصوير هادئ وطبيعي للأيام التي تريد تذكّرها. بلا وقفات متصلبة، أنت فقط.</p>
+<div class="cta"><a class="btn" href="#enquire">تحقق من موعدي</a><a class="btn ghost" href="#work">شاهد الأعمال</a></div>
+</div>
+</section>
+
+<section id="work"><div class="wrap center">
+<p class="kicker">معرض الأعمال</p><h2>بعض اللقطات المفضلة.</h2>
+<p class="lead">المس أي صورة لتراها كبيرة.</p>
+<div class="tabs" role="group" aria-label="تصفية المعرض"><button aria-pressed="true" data-f="all">الكل</button><button aria-pressed="false" data-f="wedding">الأعراس</button><button aria-pressed="false" data-f="portrait">الصور الشخصية</button><button aria-pressed="false" data-f="family">العائلات</button></div>
+<div class="grid" id="grid">
+<figure data-c="wedding"><button data-full="/demo/photographer/img/bouquet-l.webp" aria-label="افتح الصورة: wildflower bouquet"><img src="/demo/photographer/img/bouquet.webp" alt="يدا عروس تحملان باقة زهور برية بجانب نافذة" width="900" height="1124" loading="lazy"><figcaption>باقة زهور برية</figcaption></button></figure>
+<figure data-c="portrait"><button data-full="/demo/photographer/img/portrait-l.webp" aria-label="افتح الصورة: window light portrait"><img src="/demo/photographer/img/portrait.webp" alt="شابة بقميص كتان تنظر من النافذة" width="900" height="1124" loading="lazy"><figcaption>صورة بضوء النافذة</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="/demo/photographer/img/dance-l.webp" aria-label="افتح الصورة: first dance at dusk"><img src="/demo/photographer/img/dance.webp" alt="زوجان يرقصان ببطء تحت أضواء معلقة في حفل مسائي" width="900" height="1124" loading="lazy"><figcaption>الرقصة الأولى عند الغروب</figcaption></button></figure>
+<figure data-c="family"><button data-full="/demo/photographer/img/family.webp" aria-label="افتح الصورة: wheat field walk"><img src="/demo/photographer/img/family.webp" alt="عائلة من أربعة أفراد تمشي بين العشب الطويل في عصر مشرق" width="1200" height="800" loading="lazy"><figcaption>نزهة في حقل قمح</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="/demo/photographer/img/rings-l.webp" aria-label="افتح الصورة: the rings"><img src="/demo/photographer/img/rings.webp" alt="خاتمان ذهبيان بسيطان على سطح حجري بجانب بتلة مجففة" width="900" height="1124" loading="lazy"><figcaption>الخاتمان</figcaption></button></figure>
+<figure data-c="portrait"><button data-full="/demo/photographer/img/man-l.webp" aria-label="افتح الصورة: city portrait"><img src="/demo/photographer/img/man.webp" alt="رجل بسترة داكنة في شارع المدينة ينظر بعيدا عن الكاميرا" width="900" height="1124" loading="lazy"><figcaption>صورة في المدينة</figcaption></button></figure>
+</div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap about">
+<img class="rv" src="/demo/photographer/img/portrait.webp" alt="صورة بضوء نافذة ناعم" width="900" height="1124" loading="lazy">
+<div class="rv"><p class="kicker">عن الاستوديو</p><h2>تصوير هادئ لأيام صاخبة وسعيدة.</h2>
+<p>«استوديو مارلو لايت» استوديو من وحي الخيال، نستخدمه لنُظهر كيف يمكن أن يبدو موقع المصوّر. الفكرة بسيطة: جلسة هادئة وضوء صادق وصور تشبه اليوم كما عشته.</p>
+<p>تبدأ كل جلسة بحديث قصير عمّا يهمك، ثم تكاد الكاميرا تختفي.</p>
+<a class="btn" href="#enquire" style="margin-top:10px">ألقِ التحية</a></div>
+</div></section>
+
+<section id="packages"><div class="wrap center">
+<p class="kicker">الباقات</p><h2>أسعار بسيطة وواضحة.</h2>
+<p class="lead">اختر ما يناسبك. كل باقة تشمل معرضا خاصا على الإنترنت.</p>
+<div class="pk">
+<div class="card rv"><h3>صورة شخصية</h3><div class="pr">$250</div><ul><li>جلسة ساعة</li><li>25 صورة معدّلة</li><li>معرض خاص على الإنترنت</li></ul><a class="btn ghost" href="#enquire">استفسر</a></div>
+<div class="card hl rv"><h3>عائلة</h3><div class="pr">$320</div><ul><li>جلسة 90 دقيقة</li><li>40 صورة معدّلة</li><li>معرض خاص على الإنترنت</li></ul><a class="btn" href="#enquire">استفسر</a></div>
+<div class="card rv"><h3>زفاف</h3><div class="pr">من $1,800</div><ul><li>حتى 8 ساعات</li><li>معرض كامل معدّل</li><li>ألبوم تذكاري مطبوع</li></ul><a class="btn ghost" href="#enquire">استفسر</a></div>
+</div>
+<p class="note">باقات تجريبية وأسعار من وحي الخيال.</p>
+</div></section>
+
+<section class="alt"><div class="wrap center">
+<p class="kicker">كيف يعمل</p><h2>ثلاث خطوات سهلة.</h2>
+<div class="steps">
+<div class="step rv"><b>1</b><h3>ألقِ التحية</h3><p>أرسل موعدك وكلمات قليلة عمّا تفكر فيه.</p></div>
+<div class="step rv"><b>2</b><h3>خطّط لليوم</h3><p>مكالمة قصيرة لاختيار الباقة والمكان وأفضل ضوء.</p></div>
+<div class="step rv"><b>3</b><h3>استلم صورك</h3><p>معرضك الخاص جاهز للعرض والمشاركة والتنزيل.</p></div>
+</div>
+</div></section>
+
+<section id="faq"><div class="wrap center">
+<p class="kicker">الأسئلة</p><h2>معلومات مفيدة.</h2>
+<details><summary>قبل كم يجب أن أحجز؟</summary><p>فور أن يكون لديك موعد. عطلات نهاية الأسبوع المطلوبة تمتلئ أولا، لكن يستحق السؤال دائما حتى لو كان الوقت ضيقا.</p></details>
+<details><summary>هل تسافر؟</summary><p>نعم. تُتفق تكاليف السفر معك قبل الحجز، فلا مفاجآت.</p></details>
+<details><summary>متى أستلم صوري؟</summary><p>تكون معارض الصور الشخصية والعائلية جاهزة خلال أسبوعين تقريبا. وتستغرق الأعراس وقتا أطول قليلا.</p></details>
+<details><summary>هل يمكنني اختيار المكان؟</summary><p>بالطبع. حديث قصير عن المكان يساعد في التخطيط لأفضل ضوء له.</p></details>
+</div></section>
+
+<section class="alt" id="enquire"><div class="wrap center">
+<p class="kicker">استفسار</p><h2>تحقق من موعدك.</h2>
+<p class="lead">أخبرني قليلا عمّا خططت له.</p>
+<form id="ef" novalidate>
+<div class="row2"><label>اسمك<input id="n" autocomplete="name" required></label><label>البريد الإلكتروني<input id="e" type="email" autocomplete="email" required></label></div>
+<div class="row2"><label>التاريخ<input id="d" type="date"></label><label>نوع الجلسة<select id="t"><option>زفاف</option><option>صورة شخصية</option><option>عائلة</option><option>شيء آخر</option></select></label></div>
+<label>رسالتك<textarea id="m"></textarea></label>
+<button class="btn" type="submit">أرسل استفساري</button>
+<p class="ok" id="ok" role="status"></p>
+</form>
+</div></section>
+</main>
+<footer>
+<a class="brand" href="#top">استوديو مارلو <i>لايت</i></a>
+<p>هذا موقع تجريبي من Zsolution يُظهر كيف يمكن أن يبدو موقع المصوّر. «استوديو مارلو لايت» ليس نشاطا حقيقيا، ولا يُرسَل أي شيء تكتبه هنا.</p>
+<p><a href="/ar/photographers/">العودة إلى Zsolution</a></p>
+</footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عارض الصور"><button class="x" id="lx" aria-label="إغلاق">&times;</button><button class="pv" id="lp" aria-label="الصورة السابقة">&lsaquo;</button><img id="li" alt=""><button class="nx" id="ln" aria-label="الصورة التالية">&rsaquo;</button><p id="lc"></p></div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var bs=[].slice.call(document.querySelectorAll('.tabs button'));
+bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var f=b.dataset.f;[].forEach.call(document.querySelectorAll('#grid figure'),function(g){g.classList.toggle('hide',f!='all'&&g.dataset.c!=f)})})});
+var lb=$('lb'),li=$('li'),cur=0,last=null;
+function vis(){return [].slice.call(document.querySelectorAll('#grid figure:not(.hide) button'))}
+function show(i){var v=vis();cur=(i+v.length)%v.length;var b=v[cur];li.src=b.dataset.full;li.alt=b.querySelector('img').alt;$('lc').textContent=(cur+1)+' / '+v.length+'  ·  '+b.querySelector('figcaption').textContent}
+function open(b){last=b;lb.classList.add('on');document.body.style.overflow='hidden';show(vis().indexOf(b));$('lx').focus()}
+function close(){lb.classList.remove('on');document.body.style.overflow='';if(last)last.focus()}
+[].forEach.call(document.querySelectorAll('#grid button'),function(b){b.addEventListener('click',function(){open(b)})});
+$('lx').onclick=close;$('lp').onclick=function(){show(cur-1)};$('ln').onclick=function(){show(cur+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key=='Escape')close();if(e.key=='ArrowLeft')show(cur-1);if(e.key=='ArrowRight')show(cur+1);if(e.key=='Tab'){var f=[$('lx'),$('lp'),$('ln')],i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+3)%3].focus()}});
+var d=$('d');d.min=new Date().toISOString().slice(0,10);
+$('ef').addEventListener('submit',function(e){e.preventDefault();var ok=$('ok'),n=$('n').value.trim(),em=$('e').value.trim();
+if(!n||!/.+@.+\..+/.test(em)){ok.textContent='أضف اسمك وبريدا إلكترونيا صحيحا.';ok.className='ok on';return}
+ok.textContent='شكرا يا '+n+'. كان استفسارك سيُرسَل من هنا. هذا موقع تجريبي، لذلك لم يُرسَل شيء.';ok.className='ok on'});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(x){x.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(x){io.observe(x)})}
+})();
+</script>
+</body>
+</html>
