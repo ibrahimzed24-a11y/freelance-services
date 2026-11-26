@@ -9,10 +9,15 @@
 - [Sample mini-audit](https://freelance-services-zid16.vercel.app/#proof)
 - [How it works](https://freelance-services-zid16.vercel.app/#how)
 
+## Pages for other segments
+- [Photographers and videographers](https://freelance-services-zid16.vercel.app/photographers/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/photographers/))
+- [Yoga and fitness coaches](https://freelance-services-zid16.vercel.app/coaches/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/coaches/))
+
 ## Offer
 - Restaurant and hotel website design: one-page site from $350, full site from $900. For hotels, the base of hotel marketing.
 - Menu and food-cost review, from $150
 - Full audit (SEO, AI answers, speed, tracking), $149, credited if we continue
+- For photographers, videographers and yoga or fitness coaches: one bundle with a one-page site, GA4 tracking, SEO and AI-answer content and 5 social posts. Price is agreed after the free first concept.
 - Free first concept: one real page you open on your phone, no charge. For the first 5 clients, the first project is 20% off, open for 7 days from the day you message me.
 - Prices are shown in the local currency of the visitor's country on the site (EGP, SAR, AED, QAR, KWD, BHD, OMR), USD elsewhere.
 
