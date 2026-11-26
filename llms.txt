@@ -1,15 +1,16 @@
-# Ibrahim Zid
+# Zsolution
 
-> Freelance web designer for restaurants and hotels. Restaurant and hotel website design, restaurant and hotel SEO and AI answers, hotel marketing that starts with your own site, GA4 setup, menu and food-cost review. Background: five years as a chef and two as operations manager in Maldives hotels. Based in Cairo, works worldwide.
+> Zsolution, run by Ibrahim Zid in Cairo: websites for restaurants and hotels, photographers and videographers, and yoga and fitness coaches. Restaurant and hotel website design, restaurant and hotel SEO and AI answers, hotel marketing that starts with your own site, GA4 setup, menu and food-cost review. Background: five years as a chef and two as operations manager in Maldives hotels. Based in Cairo, works worldwide.
 
 ## Pages
-- [Home](https://freelance-services-zid16.vercel.app/)
-- [Services](https://freelance-services-zid16.vercel.app/#services)
-- [About](https://freelance-services-zid16.vercel.app/#about)
-- [Sample mini-audit](https://freelance-services-zid16.vercel.app/#proof)
-- [How it works](https://freelance-services-zid16.vercel.app/#how)
+- [Home, all fields](https://freelance-services-zid16.vercel.app/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/))
+- [Services](https://freelance-services-zid16.vercel.app/hospitality/#services)
+- [About](https://freelance-services-zid16.vercel.app/hospitality/#about)
+- [Sample mini-audit](https://freelance-services-zid16.vercel.app/hospitality/#proof)
+- [How it works](https://freelance-services-zid16.vercel.app/hospitality/#how)
 
-## Pages for other segments
+## Pages by field
+- [Restaurants and hotels](https://freelance-services-zid16.vercel.app/hospitality/)
 - [Photographers and videographers](https://freelance-services-zid16.vercel.app/photographers/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/photographers/))
 - [Yoga and fitness coaches](https://freelance-services-zid16.vercel.app/coaches/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/coaches/))
 

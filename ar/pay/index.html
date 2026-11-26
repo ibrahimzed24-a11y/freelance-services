@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدفع لـ Zsolution | تصميم وتطوير المواقع</title>
+<meta name="description" content="صفحة دفع آمنة لخدمات Zsolution لتصميم المواقع. ادفع عبر باي بال أو بطاقة.">
+<link rel="alternate" hreflang="en" href="https://freelance-services-zid16.vercel.app/pay/"><link rel="alternate" hreflang="ar" href="https://freelance-services-zid16.vercel.app/ar/pay/"><link rel="canonical" href="https://freelance-services-zid16.vercel.app/ar/pay/"><meta name="robots" content="noindex,follow"><link rel="icon" href="data:,">
+<style>
+  @font-face{font-family:'IBM Plex Sans Arabic';src:url('/fonts/a4.woff2') format('woff2');font-weight:400;font-display:swap}@font-face{font-family:'IBM Plex Sans Arabic';src:url('/fonts/a7.woff2') format('woff2');font-weight:700;font-display:swap}
+  [dir=rtl] .option .name,[dir=rtl] h1,[dir=rtl] .wm{font-family:inherit}[dir=rtl] .option .price .arrow{display:inline-block;transform:scaleX(-1)}[dir=rtl] .offer{border-left:1.5px solid var(--line);border-right:4px solid var(--terra)}[dir=rtl] .option .price{padding-left:0;padding-right:8px}[dir=rtl] .hi{font-family:inherit;font-size:20px;font-weight:700}
+
+  @font-face{font-family:'Caveat';src:url('/fonts/caveat-normal.woff2') format('woff2');font-weight:400 700;font-display:swap}
+  @font-face {
+    font-family: 'Fraunces';
+    src: url('/fonts/fraunces-normal.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('/fonts/dmsans-normal.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-display: swap;
+  }
+  :root {
+    --paper: #FBF6EC;
+    --card: #FFFDF8;
+    --cream: #F5EEE2;
+    --line: #E6D8BF;
+    --ink: #231B16;
+    --muted: #6f6155;
+    --terra: #BA4B34;
+    --terra-dark: #9d3e2a;
+    --olive: #5E6B4A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'IBM Plex Sans Arabic','DM Sans', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 40px 20px 72px;
+  }
+
+  /* header */
+  header { text-align: center; margin-bottom: 30px; }
+  .wm{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:30px;color:var(--terra);margin-bottom:14px;letter-spacing:-.01em}
+  .hi {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    color: var(--terra);
+    margin-bottom: 4px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .intro {
+    color: var(--muted);
+    font-size: 15.5px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* option cards */
+  .options { display: flex; flex-direction: column; gap: 14px; margin: 30px 0 8px; }
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--card);
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .option:hover, .option:focus-visible {
+    border-color: var(--terra);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(35,27,22,.07);
+    outline: none;
+  }
+  .option .name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+  .option .desc { color: var(--muted); font-size: 13.5px; }
+  .option .price {
+    font-family: 'Caveat', cursive;
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--terra);
+    white-space: nowrap;
+    padding-left: 8px;
+  }
+  .option .price .arrow { font-family: 'Caveat', cursive; color: var(--muted); font-size: 24px; }
+  .option .price .was {
+    text-decoration: line-through;
+    color: var(--muted);
+    font-size: 19px;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  .option-static { cursor: default; }
+  .option-static:hover { border-color: var(--line); transform: none; box-shadow: none; }
+
+  /* عرض الإطلاق banner */
+  .offer {
+    background: var(--cream);
+    border: 1.5px solid var(--line);
+    border-left: 4px solid var(--terra);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin: 24px 0 4px;
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .offer .offer-title {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: var(--terra);
+    margin-bottom: 2px;
+  }
+  .offer strong { color: var(--terra-dark); }
+
+  /* polaroid portrait */
+  .polaroid-wrap { display: flex; justify-content: center; margin: 34px 0 8px; }
+  .polaroid {
+    background: #fff;
+    padding: 12px 12px 14px;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 14px rgba(35,27,22,.10);
+    transform: rotate(-2deg);
+    width: 240px;
+    position: relative;
+    text-align: center;
+  }
+  .polaroid::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: 50%;
+    width: 86px; height: 26px;
+    background: rgba(230,216,191,.85);
+    transform: translateX(-50%) rotate(-3deg);
+    box-shadow: 0 1px 2px rgba(35,27,22,.08);
+  }
+  .polaroid img { width: 100%; display: block; }
+  .polaroid figcaption {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--muted);
+    padding-top: 10px;
+  }
+
+  /* ماذا يحدث بعد ذلك */
+  .next {
+    background: var(--cream);
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 22px 18px;
+    margin: 34px 0 0;
+  }
+  .next .kicker {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: var(--olive);
+    margin-bottom: 12px;
+  }
+  .next ol { list-style: none; counter-reset: step; }
+  .next li {
+    counter-increment: step;
+    display: flex;
+    gap: 12px;
+    padding: 7px 0;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .next li::before {
+    content: counter(step);
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--olive);
+    color: var(--paper);
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* trust + footer */
+  .secure {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .secure svg { flex-shrink: 0; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13.5px;
+    margin-top: 34px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--terra); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { border-bottom-color: var(--terra); }
+
+  @media (min-width: 600px) {
+    .wrap { padding-top: 64px; }
+  }
+  @media (max-width: 400px) {
+    .wrap { padding: 30px 16px 56px; }
+    h1 { font-size: 28px; }
+    .option .price { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p style="margin-bottom:18px;font-size:14px;display:flex;justify-content:space-between"><a href="/" style="color:var(--terra);text-decoration:none">&rsaquo; Zsolution</a><a href="/pay/" hreflang="en" lang="en" style="color:var(--terra);text-decoration:none">English</a></p>
+  <header>
+    <p class="wm">Zsolution</p>
+    <p class="hi">شكرا لاختيارك Zsolution</p>
+    <h1>حان وقت الاتفاق الرسمي.</h1>
+    <p class="intro">اختر ما تدفع مقابله أدناه. يتم الدفع بأمان عبر باي بال، ويمكنك الدفع برصيد باي بال أو بأي بطاقة بنكية.</p>
+  </header>
+
+  <div class="offer">
+    <p class="offer-title">عرض الإطلاق</p>
+    <p>فكرتك الأولى <strong>مجانية</strong>، وأول مشروع لك بخصم <strong>20%</strong>. لأول 5 عملاء، حتى 3 ديسمبر.</p>
+  </div>
+
+  <div class="options">
+    <div class="option option-static">
+      <span>
+        <span class="name">الفكرة الأولى</span><br>
+        <span class="desc">نظرة أولى مجانية على اتجاه موقعك الجديد. تدفع فقط إذا قررت المتابعة.</span>
+      </span>
+      <span class="price">مجانا</span>
+    </div>
+
+    <a class="option" href="https://www.paypal.com/ncp/payment/MA2KNZ5G9LH7N">
+      <span>
+        <span class="name">مراجعة كاملة للموقع</span><br>
+        <span class="desc">مراجعة مكتوبة لموقعك الحالي: السرعة والجوال والبحث وما يجب إصلاحه أولا. سعر الإطلاق لأول 5 عملاء، بخصم 20%.</span>
+      </span>
+      <span class="price"><span dir="ltr"><span class="was">$49</span> $39</span><span class="arrow"> &rsaquo;</span></span>
+    </a>
+
+    <a class="option" href="https://www.paypal.com/ncp/payment/FZ5FTKDM7KJBQ">
+      <span>
+        <span class="name">عربون المشروع</span><br>
+        <span class="desc">احجز موعد البناء. تدخل المبلغ الذي اتفقنا عليه، مع خصم 20% على أول مشروع.</span>
+      </span>
+      <span class="price">مبلغ حر<span class="arrow"> &rsaquo;</span></span>
+    </a>
+
+    <a class="option" href="https://www.paypal.com/ncp/payment/FZ5FTKDM7KJBQ">
+      <span>
+        <span class="name">شيء آخر</span><br>
+        <span class="desc">أي مبلغ آخر اتفقنا عليه.</span>
+      </span>
+      <span class="price">مبلغ حر<span class="arrow"> &rsaquo;</span></span>
+    </a>
+  </div>
+
+  
+
+  <div class="next">
+    <p class="kicker">ماذا يحدث بعد ذلك</p>
+    <ol>
+      <li>تدفع على صفحة باي بال الآمنة. لا تحتاج حساب باي بال، والبطاقة تكفي.</li>
+      <li>تصل Zsolution رسالة فورا وتتواصل معك لتأكيد التفاصيل.</li>
+      <li>يبدأ العمل. ترى تقدما حقيقيا خلال أيام، لا أسابيع.</li>
+    </ol>
+  </div>
+
+  <p class="secure">
+    <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6.5 0.75L1.25 2.75v4c0 3.25 2.24 6.29 5.25 7.5 3.01-1.21 5.25-4.25 5.25-7.5v-4L6.5 0.75z" stroke="#6f6155" stroke-width="1.2" fill="none"/>
+      <path d="M4.25 7.25l1.5 1.5 3-3" stroke="#6f6155" stroke-width="1.2" fill="none"/>
+    </svg>
+    دفع آمن عبر باي بال. تعرض صفحة الدفع اسم النشاط المسجل: Zsolution.
+  </p>
+
+  <footer>
+    أسئلة قبل الدفع؟ <a href="mailto:ibrahim.zed24@gmail.com">أرسل بريدا</a> &nbsp;·&nbsp; <a href="/ar/">العودة إلى الموقع</a>
+  </footer>
+</div>
+</body>
+</html>
