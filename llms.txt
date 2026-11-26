@@ -5,14 +5,16 @@
 ## Pages
 - [Home](https://freelance-services-zid16.vercel.app/)
 - [Services](https://freelance-services-zid16.vercel.app/#services)
-- [Background](https://freelance-services-zid16.vercel.app/#background)
+- [About](https://freelance-services-zid16.vercel.app/#about)
 - [Sample mini-audit](https://freelance-services-zid16.vercel.app/#proof)
 - [How it works](https://freelance-services-zid16.vercel.app/#how)
 
 ## Offer
-- Restaurant and hotel website design, from $900. For hotels, the base of hotel marketing.
+- Restaurant and hotel website design: one-page site from $350, full site from $900. For hotels, the base of hotel marketing.
 - Menu and food-cost review, from $150
-- Growth audit (SEO, AI answers, speed, tracking), $149, credited if we continue
+- Full audit (SEO, AI answers, speed, tracking), $149, credited if we continue
+- Free first concept: one real page you open on your phone, no charge. For the first 5 clients, the first project is 20% off, open for 7 days from the day you message me.
+- Prices are shown in the local currency of the visitor's country on the site (EGP, SAR, AED, QAR, KWD, BHD, OMR), USD elsewhere.
 
 ## Free mini-audit
 Send a website address, get 3 things to fix by email within 48 hours: [Request the mini-audit](https://freelance-services-zid16.vercel.app/#audit)
