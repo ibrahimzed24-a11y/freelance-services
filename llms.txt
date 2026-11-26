@@ -1,6 +1,6 @@
-# The Solution
+# Soluté
 
-> The Solution, run by Ibrahim Zid in Cairo: websites for restaurants and hotels, photographers and videographers, and yoga and fitness coaches. Restaurant and hotel website design, restaurant and hotel SEO and AI answers, hotel marketing that starts with your own site, GA4 setup, menu and food-cost review. Background: five years as a chef and two as operations manager in Maldives hotels. Based in Cairo, works worldwide.
+> Soluté, run by Ibrahim Zid in Cairo: websites for restaurants and hotels, photographers and videographers, and yoga and fitness coaches. Restaurant and hotel website design, restaurant and hotel SEO and AI answers, hotel marketing that starts with your own site, GA4 setup, menu and food-cost review. Background: five years as a chef and two as operations manager in Maldives hotels. Based in Cairo, works worldwide.
 
 ## Pages
 - [Home, all fields](https://freelance-services-zid16.vercel.app/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/))
