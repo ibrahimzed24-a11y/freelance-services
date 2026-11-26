@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
+<head><script>(function(){try{var P=location.pathname,ar=/^\/ar(\/|$)/.test(P),q=/[?&]lang=(en|ar)/.exec(location.search),w=null;if(q){w=q[1];localStorage.setItem('zs-lang',w)}else{w=localStorage.getItem('zs-lang')}if(!w){if(/bot|crawl|spider|slurp|lighthouse|headless|preview|facebookexternalhit/i.test(navigator.userAgent)||navigator.webdriver)return;var l=((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();if(/^ar/.test(l))w='ar';else if(/^en/.test(l))w='en';else return}if((w=='ar')!==ar){var n=ar?(P.replace(/^\/ar\/?/,'/')):('/ar'+P);var s=location.search.replace(/([?&])lang=(en|ar)&?/,'$1').replace(/[?&]$/,'');location.replace(n+s+location.hash)}}catch(e){}})()</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الدفع لـ Zsolution | تصميم وتطوير المواقع</title>
@@ -239,11 +239,33 @@
     h1 { font-size: 28px; }
     .option .price { font-size: 24px; }
   }
+/*mobile-fix*/
+@media(max-width:640px){
+.hd{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px!important;padding:12px 5vw!important;align-items:center}
+.hd .brand,.hd>a:first-child{grid-column:1/-1;grid-row:1}
+.hd nav{display:contents!important}
+.hd nav a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:6px 6px!important;font-size:13px!important;line-height:1.2;border-radius:99px}
+.hd nav a.lg{grid-column:3;grid-row:1;border:0!important;justify-self:end;min-height:44px;padding:6px 4px!important;text-decoration:underline;text-underline-offset:4px}
+fieldset{min-width:0}
+.af{grid-template-columns:minmax(0,1fr)}
+.af input,.af textarea{min-width:0;width:100%;box-sizing:border-box}
+.tabs{display:grid!important;grid-template-columns:repeat(3,1fr);width:100%!important;border-radius:26px!important;box-sizing:border-box}
+.tabs button{min-height:44px;padding:6px 4px!important;font-size:13px!important;line-height:1.2}
+.mini{min-height:44px}
+body>header,header{background:var(--paper)}
+.jump{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important}
+.jump a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;padding:8px 10px!important;line-height:1.25}
+.chips{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px!important}
+.chips button{min-width:0;white-space:normal;min-height:44px;padding:8px 10px!important;text-align:center}
+.cur{display:grid!important;grid-template-columns:repeat(4,1fr);gap:8px!important}
+.cur span{grid-column:1/-1;margin:0!important}
+.cur button{min-height:44px;padding:6px!important}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p style="margin-bottom:18px;font-size:14px;display:flex;justify-content:space-between"><a href="/" style="color:var(--terra);text-decoration:none">&rsaquo; Zsolution</a><a href="/pay/" hreflang="en" lang="en" style="color:var(--terra);text-decoration:none">English</a></p>
+  <p style="margin-bottom:18px;font-size:14px;display:flex;justify-content:space-between"><a href="/" style="color:var(--terra);text-decoration:none">&rsaquo; Zsolution</a></p>
   <header>
     <p class="wm">Zsolution</p>
     <p class="hi">شكرا لاختيارك Zsolution</p>

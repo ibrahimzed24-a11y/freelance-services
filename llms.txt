@@ -10,7 +10,7 @@
 - [How it works](https://freelance-services-zid16.vercel.app/hospitality/#how)
 
 ## Pages by field
-- [Restaurants and hotels](https://freelance-services-zid16.vercel.app/hospitality/)
+- [Restaurants and hotels](https://freelance-services-zid16.vercel.app/hospitality/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/hospitality/))
 - [Photographers and videographers](https://freelance-services-zid16.vercel.app/photographers/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/photographers/))
 - [Yoga and fitness coaches](https://freelance-services-zid16.vercel.app/coaches/) ([Arabic](https://freelance-services-zid16.vercel.app/ar/coaches/))
 
