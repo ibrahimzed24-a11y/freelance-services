@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marlow Light Studio | Sample photographer site by Zsolution</title>
+<meta name="description" content="A sample photographer website by Zsolution. Marlow Light Studio is a made-up studio, not a real business.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#17130F">
+<link rel="icon" href="/favicon-32.png">
+<link rel="preload" href="/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dmsans-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-800.webp 800w, img/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<style>
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-normal.woff2);font-weight:100 900;font-display:swap}
+@font-face{font-family:Fraunces;src:url(/fonts/fraunces-italic.woff2);font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"DM Sans";src:url(/fonts/dmsans-normal.woff2);font-weight:100 900;font-display:swap}
+:root{--bg:#17130F;--bg2:#1F1A14;--card:#241E17;--cream:#F6EBDA;--mute:#CBB9A0;--cop:#E0A06A;--copd:#B9703A;--line:#3B3126}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 6vw}
+.skip{position:absolute;top:-60px;left:10px;background:#fff;color:#000;padding:10px 14px;border-radius:8px;z-index:200}
+.skip:focus{top:10px}
+.sample{background:var(--cop);color:#1a120a;text-align:center;font-size:13px;font-weight:700;padding:8px 5vw;line-height:1.35}
+.sample a{text-underline-offset:3px}
+header{position:sticky;top:0;z-index:50;background:rgba(23,19,15,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{max-width:1120px;margin:0 auto;padding:0 6vw;height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-family:Fraunces,serif;font-weight:600;font-size:21px;text-decoration:none}
+.brand i{color:var(--cop)}
+nav{display:none;gap:30px;font-weight:600;font-size:15px}
+nav a{text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--cop)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:99px;font:inherit;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--cop);background:var(--cop);color:#1a120a;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream)}
+.btn.ghost:hover{background:var(--cream);color:#1a120a}
+.btn.sm{min-height:44px;padding:0 20px;font-size:15px}
+:focus-visible{outline:3px solid var(--cop);outline-offset:3px}
+.hero{position:relative;min-height:calc(100svh - 64px - 34px);display:grid;place-items:center;text-align:center;overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:slow 22s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(15,10,6,.45),rgba(15,10,6,.7))}
+@keyframes slow{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero .in{padding:70px 6vw;max-width:780px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cop);margin-bottom:18px}
+.hero h1{font-size:clamp(40px,8vw,80px);margin-bottom:20px}
+.hero p{font-size:clamp(17px,2.4vw,21px);max-width:560px;margin:0 auto 32px;color:#F1E3CE}
+.cta{display:grid;gap:12px;max-width:340px;margin:0 auto}
+.cta .btn{width:100%;min-height:54px}
+section{padding:84px 0}
+.center{text-align:center}
+.kicker{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--cop);margin-bottom:12px}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:18px}
+.lead{max-width:600px;margin:0 auto;color:var(--mute);font-size:18px}
+.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-width:520px;margin:30px auto 30px;background:var(--card);padding:5px;border-radius:26px}
+.tabs button{font:inherit;font-weight:700;font-size:15px;min-height:46px;border:0;border-radius:99px;background:none;color:var(--mute);cursor:pointer;transition:.2s}
+.tabs button[aria-pressed=true]{background:var(--cream);color:#1a120a}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.grid figure{flex:0 0 calc((100% - 10px)/2);position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/5;cursor:pointer;background:var(--card);padding:0;border:0;display:block;width:100%}
+.grid figure.hide{display:none}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.grid figure:hover img{transform:scale(1.05)}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(10,6,3,.8));font-size:14px;font-weight:600;text-align:left;opacity:0;transition:.3s}
+.grid figure:hover figcaption,.grid figure:focus-within figcaption{opacity:1}
+.grid button{all:unset;display:block;width:100%;height:100%;cursor:pointer}
+.grid button:focus-visible{outline:3px solid var(--cop);outline-offset:-3px}
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about{display:grid;gap:34px;align-items:center}
+.about img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;max-height:560px}
+.about p{color:var(--mute);margin-bottom:14px}
+.pk{display:grid;gap:18px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 26px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.card.hl{border-color:var(--cop);box-shadow:0 0 0 1px var(--cop)}
+.card h3{font-size:26px}
+.card .pr{font-family:Fraunces,serif;font-size:38px;color:var(--cop);margin:8px 0}
+.card ul{list-style:none;padding:0;margin:8px 0 22px;color:var(--mute);flex:1}
+.card li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.note{text-align:center;color:var(--mute);font-size:14px;margin-top:22px}
+.steps{display:grid;gap:18px;margin-top:44px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center}
+.step b{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--cop);color:#1a120a;margin:0 auto 14px;font-family:Fraunces,serif;font-size:21px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{color:var(--mute);font-size:16px}
+details{max-width:720px;margin:0 auto;border-bottom:1px solid var(--line);text-align:left}
+details:first-of-type{margin-top:40px;border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-weight:700;padding:20px 40px 20px 0;position:relative;min-height:56px;font-size:18px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--cop);transition:transform .25s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{color:var(--mute);padding:0 0 20px}
+form{max-width:560px;margin:36px auto 0;display:grid;gap:14px;text-align:left}
+.row2{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,select,textarea{font:inherit;font-size:17px;min-height:52px;padding:12px 16px;border-radius:14px;border:2px solid transparent;background:#fff;color:#1a120a;width:100%}
+textarea{min-height:110px;resize:vertical}
+form .btn{min-height:56px;margin-top:6px}
+.ok{display:none;text-align:center;background:var(--card);border:1px solid var(--cop);border-radius:18px;padding:22px;font-weight:600}
+.ok.on{display:block}
+footer{background:#0f0c09;color:var(--mute);text-align:center;padding:44px 6vw 40px;font-size:15px}
+footer .brand{color:var(--cream);display:inline-block;margin-bottom:10px}
+footer p{max-width:560px;margin:6px auto}
+footer a{color:var(--cop);text-underline-offset:3px}
+.lb{position:fixed;inset:0;background:rgba(8,5,3,.96);z-index:300;display:none;align-items:center;justify-content:center;padding:64px 14px 120px}
+.lb.on{display:flex}
+.lb img{max-height:100%;max-width:100%;width:auto;border-radius:10px;object-fit:contain;animation:fade .3s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:2px solid var(--cream);background:rgba(23,19,15,.7);color:var(--cream);font-size:22px;cursor:pointer;display:grid;place-items:center}
+.lb .x{top:10px;right:10px}
+.lb .pv{bottom:10px;left:calc(50% - 60px)}
+.lb .nx{bottom:10px;left:calc(50% + 12px)}
+.lb p{position:absolute;bottom:84px;left:14px;right:14px;text-align:center;font-size:14px;color:var(--mute);pointer-events:none}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(min-width:700px){
+nav{display:flex}
+.cta{grid-template-columns:1fr 1fr;max-width:480px}
+.grid{gap:14px}.grid figure{flex-basis:calc((100% - 42px)/4)}
+.tabs{grid-template-columns:repeat(4,1fr);border-radius:99px}
+.about{grid-template-columns:1fr 1fr;gap:56px}
+.pk,.steps{grid-template-columns:repeat(3,1fr)}
+.row2{grid-template-columns:1fr 1fr}
+.lb .pv{left:14px;bottom:auto;top:50%}
+.lb .nx{left:auto;right:14px;bottom:auto;top:50%}
+.lb p{bottom:18px}.lb{padding:64px 80px 56px}
+}
+@media(max-width:699px){.about{text-align:center}.hd .btn{min-height:44px;padding:0 20px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero img,.lb img{animation:none}.rv{opacity:1;transform:none;transition:none}.btn,.grid img{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sample">Sample site by Zsolution, not a real business. <a href="/photographers/">See what Zsolution builds</a></div>
+<header><div class="hd"><a class="brand" href="#top">Marlow <i>Light</i> Studio</a><nav aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#packages">Packages</a><a href="#faq">Questions</a></nav><a class="btn sm" href="#enquire">Enquire</a></div></header>
+<main id="main">
+<section class="hero" id="top" style="padding:0">
+<img src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero.webp 1600w" sizes="100vw" alt="A couple walking hand in hand along a coastal cliff path at golden hour" width="1600" height="900" fetchpriority="high">
+<div class="in">
+<p class="eyebrow">Weddings, portraits and families</p>
+<h1>Real moments, softly lit.</h1>
+<p>Calm, natural photography for the days you want to remember. No stiff poses, just you.</p>
+<div class="cta"><a class="btn" href="#enquire">Check my date</a><a class="btn ghost" href="#work">See the work</a></div>
+</div>
+</section>
+
+<section id="work"><div class="wrap center">
+<p class="kicker">Portfolio</p><h2>A few favourite frames.</h2>
+<p class="lead">Tap any photo to see it large.</p>
+<div class="tabs" role="group" aria-label="Filter the gallery"><button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="wedding">Weddings</button><button aria-pressed="false" data-f="portrait">Portraits</button><button aria-pressed="false" data-f="family">Families</button></div>
+<div class="grid" id="grid">
+<figure data-c="wedding"><button data-full="img/bouquet-l.webp" aria-label="Open photo: wildflower bouquet"><img src="img/bouquet.webp" alt="A bride's hands holding a wildflower bouquet by a bright window" width="900" height="1124" loading="lazy"><figcaption>Wildflower bouquet</figcaption></button></figure>
+<figure data-c="portrait"><button data-full="img/portrait-l.webp" aria-label="Open photo: window light portrait"><img src="img/portrait.webp" alt="A young woman in a linen shirt looking out of a bright window" width="900" height="1124" loading="lazy"><figcaption>Window light portrait</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="img/dance-l.webp" aria-label="Open photo: first dance at dusk"><img src="img/dance.webp" alt="A couple slow dancing under string lights at dusk" width="900" height="1124" loading="lazy"><figcaption>First dance at dusk</figcaption></button></figure>
+<figure data-c="family"><button data-full="img/family.webp" aria-label="Open photo: wheat field walk"><img src="img/family.webp" alt="A family walking through a golden wheat field at sunset" width="1200" height="800" loading="lazy"><figcaption>Wheat field walk</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="img/rings-l.webp" aria-label="Open photo: the rings"><img src="img/rings.webp" alt="Two gold rings resting on a pressed petal" width="900" height="1124" loading="lazy"><figcaption>The rings</figcaption></button></figure>
+<figure data-c="portrait"><button data-full="img/man-l.webp" aria-label="Open photo: city portrait"><img src="img/man.webp" alt="A man in a dark jacket looking into the distance on a city street" width="900" height="1124" loading="lazy"><figcaption>City portrait</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="img/mountain.webp" aria-label="Open photo: sunrise on the ridge"><img src="img/mountain.webp" alt="A couple standing on a mountain ridge at sunrise above the clouds" width="1200" height="800" loading="lazy"><figcaption>Sunrise on the ridge</figcaption></button></figure>
+<figure data-c="wedding"><button data-full="img/hero.webp" aria-label="Open photo: coastal walk"><img src="img/couple.webp" alt="A couple walking along a coastal cliff path at golden hour" width="1200" height="675" loading="lazy"><figcaption>Coastal walk</figcaption></button></figure>
+</div>
+</div></section>
+
+<section class="alt" id="about"><div class="wrap about">
+<img class="rv" src="img/portrait.webp" alt="Soft window light portrait" width="900" height="1124" loading="lazy">
+<div class="rv"><p class="kicker">About the studio</p><h2>Quiet photography for loud, happy days.</h2>
+<p>Marlow Light Studio is a made-up studio used to show what a photographer's website can look like. The idea is simple: a calm session, honest light and photos that feel like the day did.</p>
+<p>Every session starts with a short chat about what matters to you, then the camera mostly gets out of the way.</p>
+<a class="btn" href="#enquire" style="margin-top:10px">Say hello</a></div>
+</div></section>
+
+<section id="packages"><div class="wrap center">
+<p class="kicker">Packages</p><h2>Simple, clear pricing.</h2>
+<p class="lead">Pick what fits. Every package includes a private online gallery.</p>
+<div class="pk">
+<div class="card rv"><h3>Portrait</h3><div class="pr">$250</div><ul><li>1 hour session</li><li>25 edited photos</li><li>Private online gallery</li></ul><a class="btn ghost" href="#enquire">Enquire</a></div>
+<div class="card hl rv"><h3>Family</h3><div class="pr">$320</div><ul><li>90 minute session</li><li>40 edited photos</li><li>Private online gallery</li></ul><a class="btn" href="#enquire">Enquire</a></div>
+<div class="card rv"><h3>Wedding</h3><div class="pr">from $1,800</div><ul><li>Up to 8 hours</li><li>Full edited gallery</li><li>Printed keepsake album</li></ul><a class="btn ghost" href="#enquire">Enquire</a></div>
+</div>
+<p class="note">Sample packages and made-up prices.</p>
+</div></section>
+
+<section class="alt"><div class="wrap center">
+<p class="kicker">How it works</p><h2>Three easy steps.</h2>
+<div class="steps">
+<div class="step rv"><b>1</b><h3>Say hello</h3><p>Send your date and a few words about what you have in mind.</p></div>
+<div class="step rv"><b>2</b><h3>Plan the day</h3><p>A short call to choose a package, a place and the best light.</p></div>
+<div class="step rv"><b>3</b><h3>Get your photos</h3><p>Your private gallery is ready to view, share and download.</p></div>
+</div>
+</div></section>
+
+<section id="faq"><div class="wrap center">
+<p class="kicker">Questions</p><h2>Good to know.</h2>
+<details><summary>How far ahead should I book?</summary><p>As soon as you have a date. Popular weekends fill first, but short notice is always worth asking about.</p></details>
+<details><summary>Do you travel?</summary><p>Yes. Travel costs are agreed with you before booking, so there are no surprises.</p></details>
+<details><summary>When will I get my photos?</summary><p>Portrait and family galleries are ready in about two weeks. Weddings take a little longer.</p></details>
+<details><summary>Can I choose the location?</summary><p>Of course. A short chat about the place helps plan the best light for it.</p></details>
+</div></section>
+
+<section class="alt" id="enquire"><div class="wrap center">
+<p class="kicker">Enquire</p><h2>Check your date.</h2>
+<p class="lead">Tell me a little about what you have planned.</p>
+<form id="ef" novalidate>
+<div class="row2"><label>Your name<input id="n" autocomplete="name" required></label><label>Email<input id="e" type="email" autocomplete="email" required></label></div>
+<div class="row2"><label>Date<input id="d" type="date"></label><label>Type of session<select id="t"><option>Wedding</option><option>Portrait</option><option>Family</option><option>Something else</option></select></label></div>
+<label>Message<textarea id="m"></textarea></label>
+<button class="btn" type="submit">Send my enquiry</button>
+<p class="ok" id="ok" role="status"></p>
+</form>
+</div></section>
+</main>
+<footer>
+<a class="brand" href="#top">Marlow <i>Light</i> Studio</a>
+<p>This is a sample website made by Zsolution to show what a photographer's site can look like. Marlow Light Studio is not a real business, and nothing you type here is sent.</p>
+<p><a href="/photographers/">Back to Zsolution</a></p>
+</footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" id="lx" aria-label="Close">&times;</button><button class="pv" id="lp" aria-label="Previous photo">&lsaquo;</button><img id="li" alt=""><button class="nx" id="ln" aria-label="Next photo">&rsaquo;</button><p id="lc"></p></div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var bs=[].slice.call(document.querySelectorAll('.tabs button'));
+bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var f=b.dataset.f;[].forEach.call(document.querySelectorAll('#grid figure'),function(g){g.classList.toggle('hide',f!='all'&&g.dataset.c!=f)})})});
+var lb=$('lb'),li=$('li'),cur=0,last=null;
+function vis(){return [].slice.call(document.querySelectorAll('#grid figure:not(.hide) button'))}
+function show(i){var v=vis();cur=(i+v.length)%v.length;var b=v[cur];li.src=b.dataset.full;li.alt=b.querySelector('img').alt;$('lc').textContent=(cur+1)+' / '+v.length+'  ·  '+b.querySelector('figcaption').textContent}
+function open(b){last=b;lb.classList.add('on');document.body.style.overflow='hidden';show(vis().indexOf(b));$('lx').focus()}
+function close(){lb.classList.remove('on');document.body.style.overflow='';if(last)last.focus()}
+[].forEach.call(document.querySelectorAll('#grid button'),function(b){b.addEventListener('click',function(){open(b)})});
+$('lx').onclick=close;$('lp').onclick=function(){show(cur-1)};$('ln').onclick=function(){show(cur+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key=='Escape')close();if(e.key=='ArrowLeft')show(cur-1);if(e.key=='ArrowRight')show(cur+1);if(e.key=='Tab'){var f=[$('lx'),$('lp'),$('ln')],i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+3)%3].focus()}});
+var d=$('d');d.min=new Date().toISOString().slice(0,10);
+$('ef').addEventListener('submit',function(e){e.preventDefault();var ok=$('ok'),n=$('n').value.trim(),em=$('e').value.trim();
+if(!n||!/.+@.+\..+/.test(em)){ok.textContent='Please add your name and a valid email.';ok.className='ok on';return}
+ok.textContent='Thank you, '+n+'. Your enquiry would be sent here. This is a sample, so nothing was sent.';ok.className='ok on'});
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(x){x.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(x){io.observe(x)})}
+})();
+</script>
+</body>
+</html>

@@ -132,6 +132,22 @@ body>header,header{background:var(--paper)}
 .cur span{grid-column:1/-1;margin:0!important}
 .cur button{min-height:44px;padding:6px!important}
 }
+/*zb*/
+.ctas{display:grid;gap:12px;grid-template-columns:1fr;max-width:380px;margin-top:24px}
+.zb{display:flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:0 22px;border-radius:99px;font-weight:700;font-size:16px;line-height:1.2;text-decoration:none;border:2px solid var(--tc);background:var(--tc);color:#fff;box-shadow:0 4px 0 #8c3320;font-family:inherit;transition:transform .15s}
+.zb:hover{transform:translateY(2px)}
+.zb.alt{background:transparent;color:var(--ink);border-color:var(--ink);box-shadow:none}
+.zb.alt:hover{background:var(--ink);color:#fff}
+.dms{max-width:960px}
+.dm{padding:0!important;overflow:hidden;text-align:center}
+.dm img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-radius:0}
+.dm b{margin:18px 16px 4px!important}
+.dm span{margin:0 16px}
+.dm .zb{margin:16px;font-size:15px;color:var(--ink);border-color:var(--ink);background:transparent;box-shadow:none;font-style:normal}
+.dm:hover .zb{background:var(--ink);color:#fff}
+.samplelink{margin-top:18px}.samplelink .zb{max-width:288px}
+@media(min-width:700px){.ctas{grid-template-columns:1fr 1fr;max-width:600px}}
+/*/zb*/
 </style><script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
@@ -154,7 +170,7 @@ if(n){gtag('event',n,{link_url:u});if(n!=='portfolio_click')track(n);}});
  <div><span class="hand" style="font-size:28px">أهلا بك في Zsolution.</span>
   <h1>مواقع للمطاعم والفنادق، <em>ويجدها الناس على جوجل.</em></h1>
   <p class="lede">صُنع على يد طاهٍ سابق في منتجعات يعرف مطبخك. أرسل موقعك واحصل على 3 أشياء تحتاج إصلاحا، مجانا.</p>
-  <div class="cta"><a class="btn" href="#audit">احصل على مراجعة مصغّرة مجانية</a><a class="btn-plain" href="#services">شاهد الخدمات والأسعار</a></div>
+  <div class="ctas"><a class="zb" href="#audit">احصل على مراجعة مصغّرة مجانية</a><a class="zb alt" href="/demo/restaurant/">شاهد موقعا تجريبيا حيا</a></div>
   <div class="steps" aria-hidden="true"><span id="s1" class="on"><i>1</i>قائمتك اليوم</span><span id="s2"><i>2</i>مبنية كموقع</span><span id="s3"><i>3</i>تظهر في جوجل</span></div>
  </div>
  <div class="right" aria-hidden="true">
@@ -189,7 +205,7 @@ if(n){gtag('event',n,{link_url:u});if(n!=='portfolio_click')track(n);}});
 
 <article class="svc rv rev" id="s-web"><div class="txt"><span class="hand">موقع من صفحة واحدة يبدأ من ⁦$99⁩</span><h3>تصميم مواقع المطاعم والفنادق</h3>
  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">ما تحصل عليه</button><button role="tab" aria-selected="false" data-t="1">لماذا يهم</button><button role="tab" aria-selected="false" data-t="2">السعر</button></div>
- <div class="pan on"><ul><li>تصميم موقع مطعم وموقع فندق: القائمة أو الغرف وتفاصيل التواصل والحجز</li><li>سريع وواضح على كل هاتف</li><li>يُقرأ بنظرة، دون بحث</li></ul><p class="samplelink" style="margin-top:14px"><a href="/demo/restaurant/" style="font-weight:700;color:var(--tcd)">شاهد موقع مطعم كاملا كنموذج &larr;</a> <span style="color:var(--mute);font-size:14px">(مطعم من الخيال، للعرض فقط، والموقع بالإنجليزية)</span></p></div>
+ <div class="pan on"><ul><li>تصميم موقع مطعم وموقع فندق: القائمة أو الغرف وتفاصيل التواصل والحجز</li><li>سريع وواضح على كل هاتف</li><li>يُقرأ بنظرة، دون بحث</li></ul><p class="samplelink"><a class="zb alt" href="/demo/restaurant/">شاهد موقعا تجريبيا حيا</a></p></div>
  <div class="pan"><p>يقرر الضيوف من هاتفهم في ثوان. موقع تكون فيه القائمة أو الغرف والعنوان وزر الحجز على بعد ضغطة يحوّل البحث إلى زيارة.</p></div>
  <div class="pan"><p>موقع من صفحة واحدة يبدأ من <b>⁦$99⁩</b> (أول 5 عملاء يدفعون ⁦$79⁩). الموقع الكامل متعدد الصفحات يُحدد سعره بعد فكرتك الأولى المجانية. اختر العناصر على الجانب لترى أي حجم يناسبك.</p></div></div>
  <div class="demo" id="wd" role="group" aria-label="عرض تفاعلي لبناء الموقع"><div class="dh"><b>جرّب: ابنِ موقعا قطعة قطعة</b><small>مطعم تجريبي، لا شيء حقيقي</small></div>
