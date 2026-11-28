@@ -130,7 +130,7 @@ p>a[href="/"],p>a[href="/ar/"],p>a[href$="/"]:only-child{display:inline-flex;ali
 .mqi{display:flex;width:max-content;animation:mq 34s linear infinite}
 .mq:hover .mqi{animation-play-state:paused}
 .mqi span{font:800 clamp(15px,2vw,19px) Nunito,"DM Sans",sans-serif;color:var(--teal-d);background:#fff;border-radius:var(--pill);padding:10px 22px;margin:0 7px;box-shadow:var(--sh1);white-space:nowrap}
-@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes mq{to{transform:translateX(-50%)}}.mq.story{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}.mq.story .mqi{animation-duration:18s}.mq.story .mqi span{background:var(--tc);color:#fff}
 [lang=ar] .mqi span{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
 @media(prefers-reduced-motion:reduce){.mqi{animation:none}}
 .hero h1 mark,.sub b{background:linear-gradient(transparent 60%,var(--apricot-l) 60%);display:inline;line-height:inherit}
