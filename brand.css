@@ -172,7 +172,7 @@ img[src*=sticker],.fig img,.hero img{border-radius:var(--r)}
 .sk.t{height:7px}
 .sk.t.s{opacity:.7}
 .sk.btn{height:22px;border-radius:99px;background:var(--tc);width:0}
-.skl.go .sk.h{width:60%}.skl.go .sk.img{width:100%}.skl.go .sk.t{width:82%}.skl.go .sk.t.s{width:55%}.skl.go .sk.btn{width:52%}
+.skl.play .sk.h{width:60%}.skl.play .sk.img{width:100%}.skl.play .sk.t{width:82%}.skl.play .sk.t.s{width:55%}.skl.play .sk.btn{width:52%}
 .bdg{position:absolute;top:32px;inset-inline-end:8px;transform:scale(0);transition:transform .3s cubic-bezier(.2,1.6,.4,1);z-index:3}
 .bdg.pop{transform:scale(1)}
 .bdg.ok{background:var(--ac);color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:var(--sh2)}
@@ -189,3 +189,36 @@ img[src*=sticker],.fig img,.hero img{border-radius:var(--r)}
 .dots{color:var(--ac);letter-spacing:2px;font-size:11px;white-space:nowrap}
 
 .dots i{color:var(--line);font-style:normal}
+/* stepwise phone flows v4 */
+.mp.tall{width:min(250px,100%);height:346px;margin:6px auto 4px}
+.scr2{position:absolute;inset:26px 12px 12px;opacity:0;transform:translateX(24px);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+[dir="rtl"] .scr2{transform:translateX(-24px)}
+.scr2.on{opacity:1;transform:none;pointer-events:auto}
+.phimg{width:100%;height:76px;object-fit:cover;border-radius:12px;display:block}
+.scr2 .t{display:block;margin:8px 2px 2px;font-size:13px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;border:1px solid var(--line);border-radius:12px;padding:9px 10px;margin-top:8px;background:#fff;font:inherit;font-size:12.5px;cursor:pointer;text-align:start;color:inherit}
+.row:active{border-color:var(--ac)}
+.okc2{width:56px;height:56px;border-radius:50%;background:var(--ac);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;margin:30px auto 12px;animation:pop2 .45s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop2{from{transform:scale(0)}}
+.scr2.done{text-align:center}
+.scr2.done small{display:block;color:var(--mute);margin:6px 0 12px}
+.pg{position:absolute;inset:24px 10px 26px}
+.pg .phimg{height:74px;opacity:0;filter:blur(0)}
+.pg .t{display:block;margin:7px 2px 5px;font-size:12.5px;opacity:0}
+.pg .ln{display:block;height:6px;border-radius:4px;background:var(--apricot);opacity:.55;margin:0 2px 6px;opacity:0}
+.pg .ln.s{width:68%}
+.pg .pillb{display:inline-block;margin-top:5px;background:var(--tc);color:#fff;border-radius:99px;padding:4px 12px;font-size:11px;opacity:0}
+.pg.play .phimg{opacity:1;transition:opacity .5s ease .05s}
+.pg.play .t{opacity:1;transition:opacity .3s ease .3s}
+.pg.play .ln{opacity:.55;transition:opacity .3s ease .45s}
+.pg.play .ln.s{transition-delay:.55s}
+.pg.play .pillb{opacity:1;transition:opacity .3s ease .7s}
+.pg.slow .phimg{filter:blur(7px)}
+.pg.slow.play .phimg{opacity:1;filter:blur(0);transition:opacity 4.6s ease .4s,filter 4.6s ease .4s}
+.pg.slow.play .t{transition-delay:4.4s}
+.pg.slow.play .ln{transition-delay:4.8s}
+.pg.slow.play .ln.s{transition-delay:5.1s}
+.pg.slow.play .pillb{transition-delay:9s}
+.acard img.ath{flex:none;width:40px;height:40px;border-radius:50%;object-fit:cover}
+.row .rc{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.row .rc small{color:var(--mute);font-size:11.5px}
