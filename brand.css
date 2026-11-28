@@ -222,3 +222,24 @@ img[src*=sticker],.fig img,.hero img{border-radius:var(--r)}
 .acard img.ath{flex:none;width:40px;height:40px;border-radius:50%;object-fit:cover}
 .row .rc{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
 .row .rc small{color:var(--mute);font-size:11.5px}
+/* gallery grid for photographer demos */
+.pg .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}
+.pg .pgrid img{width:100%;height:40px;object-fit:cover;border-radius:8px;opacity:0;display:block}
+.pg.play .pgrid img{opacity:1;transition:opacity .35s ease}
+.pg.play .pgrid img:nth-child(1){transition-delay:.05s}.pg.play .pgrid img:nth-child(2){transition-delay:.15s}.pg.play .pgrid img:nth-child(3){transition-delay:.25s}.pg.play .pgrid img:nth-child(4){transition-delay:.35s}.pg.play .pgrid img:nth-child(5){transition-delay:.45s}.pg.play .pgrid img:nth-child(6){transition-delay:.55s}
+.pg.slow .pgrid img{filter:blur(6px)}
+.pg.slow.play .pgrid img{opacity:1;filter:blur(0);transition:opacity 1.4s ease,filter 1.4s ease}
+.pg.slow.play .pgrid img:nth-child(1){transition-delay:.8s}.pg.slow.play .pgrid img:nth-child(2){transition-delay:2s}.pg.slow.play .pgrid img:nth-child(3){transition-delay:3.2s}.pg.slow.play .pgrid img:nth-child(4){transition-delay:4.4s}.pg.slow.play .pgrid img:nth-child(5){transition-delay:6.5s}.pg.slow.play .pgrid img:nth-child(6){transition-delay:8.5s}
+/* hospitality v4 stepwise demos */
+.prow{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12.5px;margin-top:8px;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.prow.in{opacity:1;transform:none}
+.prow.leak{border-color:#C9452A}
+.leakt{font-style:normal;background:#C9452A;color:#fff;border-radius:99px;font-size:10px;padding:2px 8px;margin-inline-start:4px;white-space:nowrap}
+.blk2{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;font-size:12px;margin-top:8px;opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s}
+.blk2.in{opacity:1;transform:none}
+.blk2 b{display:block;font-size:12px}
+.blk2 span{color:var(--mute);font-size:11px}
+.blk2.pill2{background:var(--tc);color:#fff;text-align:center;font-weight:700;border:none}
+.blk2.imgs3{display:flex;gap:6px;padding:6px}
+.blk2.imgs3 img{width:100%;flex:1;aspect-ratio:1;object-fit:cover;border-radius:8px;min-width:0}
+.hide{display:none}
